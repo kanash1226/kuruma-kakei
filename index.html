@@ -1,18 +1,92 @@
 <!doctype html>
 <html lang="ja">
 <head>
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7TYP0B7E6"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7TYP0B7E6">
+// Ver1.1: Google Analytics custom events
+function trackEvent(name, params={}) {
+  if (typeof gtag === "function") gtag("event", name, params);
+}
+document.querySelectorAll(".js-start-diagnosis").forEach(el => {
+  el.addEventListener("click", () => trackEvent("start_diagnosis"));
+});
+document.querySelectorAll(".vehicle-card, .car-chip").forEach(el => {
+  el.addEventListener("click", () => trackEvent("select_car", {
+    car_name: el.dataset.name || ""
+  }));
+});
+const diagButton = document.getElementById("go");
+if (diagButton) {
+  diagButton.addEventListener("click", () => trackEvent("complete_diagnosis", {
+    car_name: document.getElementById("car")?.value || "",
+    diagnosis_mode: document.getElementById("mode")?.value || ""
+  }));
+}
+const copyResultBtnV11 = document.getElementById("copyResultBtn");
+if (copyResultBtnV11) copyResultBtnV11.addEventListener("click", () => trackEvent("copy_result"));
+const downloadResultBtnV11 = document.getElementById("downloadResultBtn");
+if (downloadResultBtnV11) downloadResultBtnV11.addEventListener("click", () => trackEvent("download_result"));
+
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-X7TYP0B7E6');
 </script>
+
+<meta name="description" content="手取り・家計・車両価格・維持費を入力すると、欲しいクルマを維持できるか、現金一括・銀行ローン・残クレのどれが将来資産を残しやすいかを無料診断します。">
+<meta name="keywords" content="クルマ家計診断,車 買えるか,自動車ローン 比較,現金一括 銀行ローン,残クレ,車 維持費,資産形成">
+<meta name="author" content="きゃな｜資産形成とクルマ">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://kuruma-kakei.vercel.app/">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/favicon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="クルマ家計診断 by きゃな">
+<meta property="og:title" content="クルマ家計診断｜好きなクルマも、資産最大化も。">
+<meta property="og:description" content="欲しいクルマを維持できるか、どの買い方が将来資産を残しやすいかを無料診断。">
+<meta property="og:url" content="https://kuruma-kakei.vercel.app/">
+<meta property="og:image" content="https://kuruma-kakei.vercel.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="クルマ家計診断｜好きなクルマも、資産最大化も。">
+<meta name="twitter:description" content="家計と欲しいクルマを入力し、現金一括・銀行ローン・残クレを比較。">
+<meta name="twitter:image" content="https://kuruma-kakei.vercel.app/og-image.png">
+<meta name="twitter:site" content="@Kyana_ZZ">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "クルマ家計診断",
+  "url": "https://kuruma-kakei.vercel.app/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "description": "家計とクルマの条件から購入可否、維持費、購入方法別の将来資産を試算する無料Webアプリ。",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "JPY"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "きゃな",
+    "sameAs": [
+      "https://note.com/kanash1226",
+      "https://x.com/Kyana_ZZ"
+    ]
+  }
+}
+</script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>クルマ家計診断 by きゃな</title>
+<title>クルマ家計診断｜車を買えるか・最適な購入方法を無料診断</title>
 <style>
 :root{--bg:#f4f7fb;--card:#fff;--ink:#122033;--muted:#667085;--line:#dfe5ee;--blue:#2d5cff;--navy:#102846;--green:#0d8a60;--yellow:#a97008;--red:#bd3838;--shadow:0 15px 36px rgba(16,40,70,.09)}
 *{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;background:var(--bg);color:var(--ink)}
@@ -38,8 +112,8 @@ footer{padding:26px 0 42px;color:var(--muted);font-size:12px;line-height:1.7}
 @media(max-width:850px){.herogrid,.grid,.about{grid-template-columns:1fr}.form{grid-template-columns:1fr}.full{grid-column:auto}}
 
 .hero{position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;inset:auto -120px -160px auto;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(49,94,251,.20),transparent 68%)}
-.hero:after{content:"";position:absolute;left:-120px;top:-160px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(16,40,69,.11),transparent 70%)}
+.hero:before{pointer-events:none;content:"";position:absolute;inset:auto -120px -160px auto;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(49,94,251,.20),transparent 68%)}
+.hero:after{pointer-events:none;content:"";position:absolute;left:-120px;top:-160px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(16,40,69,.11),transparent 70%)}
 .mode-switch{display:flex;gap:8px;padding:6px;background:#eaf0f8;border-radius:14px;margin:18px 0 22px}
 .mode-switch button{margin:0;padding:11px 14px;background:transparent;color:var(--muted);box-shadow:none}
 .mode-switch button.active{background:#fff;color:var(--ink);box-shadow:0 8px 20px rgba(16,40,69,.10)}
@@ -125,7 +199,7 @@ nav a:hover{background:#fff;color:var(--ink);box-shadow:var(--shadow-soft)}
   color:#fff;
   min-height:650px;
 }
-.hero:before{
+.hero:before{pointer-events:none;
   content:"";
   position:absolute;
   inset:0;
@@ -134,7 +208,7 @@ nav a:hover{background:#fff;color:var(--ink);box-shadow:var(--shadow-soft)}
     repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 1px,transparent 1px 74px);
   opacity:.8;
 }
-.hero:after{
+.hero:after{pointer-events:none;
   content:"";
   position:absolute;
   right:-80px;bottom:-60px;
@@ -329,7 +403,7 @@ footer{
 .sticky-mobile-cta{display:none}
 @media(max-width:880px){
   .hero{min-height:auto;padding-bottom:420px}
-  .hero:after{width:430px;height:220px;right:-90px;bottom:40px}
+  .hero:after{pointer-events:none;width:430px;height:220px;right:-90px;bottom:40px}
   .sticky-mobile-cta{
     display:block;position:fixed;z-index:50;left:14px;right:14px;bottom:14px
   }
@@ -397,6 +471,7 @@ html[data-theme="dark"] .ai-bubble{background:#132640}
 .line-chart-wrap{margin-top:18px;padding:18px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#fff,#f8fbff)}
 html[data-theme="dark"] .line-chart-wrap{background:linear-gradient(180deg,#0d1d34,#10223c)}
 #lineChart{width:100%;height:280px;display:block}
+#diag{scroll-margin-top:88px}
 .chart-legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--muted)}
 .legend-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
 .share-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
@@ -410,23 +485,6 @@ html[data-theme="dark"] .line-chart-wrap{background:linear-gradient(180deg,#0d1d
 .share-card .share-diff{font-size:34px}.share-card .share-footer{position:absolute;left:56px;bottom:42px;font-size:24px;color:#dbe7f5}
 @media(max-width:980px){.vehicle-gallery{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.vehicle-gallery{grid-template-columns:1fr}.share-actions{display:grid}.share-actions button{width:100%}}
-
-
-#diag.start-highlight{
-  animation:diagnosisPulse 1.15s ease;
-}
-@keyframes diagnosisPulse{
-  0%{filter:brightness(1)}
-  35%{filter:brightness(1.05);transform:translateY(-2px)}
-  100%{filter:brightness(1);transform:none}
-}
-.start-toast{
-  position:fixed;z-index:100;left:50%;top:86px;transform:translate(-50%,-18px);
-  padding:12px 18px;border-radius:999px;background:#0b1d35;color:#fff;
-  box-shadow:0 16px 38px rgba(11,29,53,.28);font-weight:800;font-size:14px;
-  opacity:0;pointer-events:none;transition:.25s;
-}
-.start-toast.show{opacity:1;transform:translate(-50%,0)}
 
 </style>
 </head>
@@ -445,7 +503,7 @@ html[data-theme="dark"] .line-chart-wrap{background:linear-gradient(180deg,#0d1d
   </div>
 </div>
 <div class="quote">簡単に諦めるのではなく、数字を見ながら「どうすれば実現できるか」を考える。</div>
-<a class="cta js-start-diagnosis" href="#diag" role="button">無料で診断する</a>
+<a class="cta js-start-diagnosis" href="#diag">無料で診断する</a>
 <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;color:#c9d6e8;font-size:13px"><span>✓ 登録不要</span><span>✓ 約3分</span><span>✓ スマホ対応</span></div></div>
 <div class="card dark"><h2>診断でわかること</h2><div class="features">
 <div class="feature"><div class="dot">✓</div><div><b>今の家計で購入できるか</b><div class="small">ローン・維持費・生活費をまとめて判定</div></div></div>
@@ -477,7 +535,7 @@ html[data-theme="dark"] .line-chart-wrap{background:linear-gradient(180deg,#0d1d
   </div>
 </div></section>
 
-<section class="section reveal show" id="diag"><div class="wrap"><h2>クルマ家計診断</h2><p class="desc">まずは簡単診断。さらに詳しく見たい場合は詳細診断へ。現金一括・銀行ローン・残クレを比較し、将来資産が最も残りやすい買い方を提案します。</p>
+<section class="section reveal" id="diag"><div class="wrap"><h2>クルマ家計診断</h2><p class="desc">まずは簡単診断。さらに詳しく見たい場合は詳細診断へ。現金一括・銀行ローン・残クレを比較し、将来資産が最も残りやすい買い方を提案します。</p>
 <div class="grid">
 <div class="card"><h3>家計と希望条件</h3>
 
@@ -663,7 +721,21 @@ html[data-theme="dark"] .line-chart-wrap{background:linear-gradient(180deg,#0d1d
   <div class="share-footer">note.com/kanash1226　｜　X @Kyana_ZZ</div>
 </div>
 
-<footer><div class="wrap">本サイトの診断結果は参考情報です。ローン審査、将来の収入、金利、リセール、維持費を保証するものではありません。購入前には最新の見積もりと生活設計を確認してください。</div></footer>
+<footer><div class="wrap">
+  <div style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start">
+    <div style="max-width:760px">
+      <b style="color:#fff">クルマ家計診断 by きゃな</b>
+      <p>本サイトの診断結果は参考情報です。ローン審査、投資成果、将来の収入、金利、税金、リセール、維持費を保証するものではありません。契約前には金融機関・販売店・税理士等へご確認ください。</p>
+    </div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap">
+      <a href="privacy.html" style="color:#dbe7f5">プライバシーポリシー</a>
+      <a href="contact.html" style="color:#dbe7f5">お問い合わせ</a>
+      <a href="https://note.com/kanash1226" target="_blank" rel="noopener noreferrer" style="color:#dbe7f5">note</a>
+      <a href="https://x.com/Kyana_ZZ" target="_blank" rel="noopener noreferrer" style="color:#dbe7f5">X</a>
+    </div>
+  </div>
+  <div style="margin-top:20px;border-top:1px solid rgba(255,255,255,.12);padding-top:16px">© 2026 クルマ家計診断 by きゃな</div>
+</div></footer>
 
 <script>
 const f=v=>`${new Intl.NumberFormat("ja-JP",{maximumFractionDigits:1}).format(v)}万円`;
@@ -1048,38 +1120,22 @@ document.getElementById("downloadResultBtn").addEventListener("click",()=>{
 });
 
 
-// Reliable navigation for every "無料で診断する" button.
-function openDiagnosisForm(event){
-  if(event) event.preventDefault();
-  const section=document.getElementById("diag");
-  if(!section) return;
-
-  section.classList.add("show","start-highlight");
-  section.style.opacity="1";
-  section.style.transform="none";
-
-  const headerOffset=78;
-  const top=section.getBoundingClientRect().top+window.pageYOffset-headerOffset;
-  window.scrollTo({top,behavior:"smooth"});
-
-  const toast=document.getElementById("startToast");
-  if(toast){
-    toast.classList.add("show");
-    setTimeout(()=>toast.classList.remove("show"),1600);
-  }
-
-  setTimeout(()=>{
-    section.classList.remove("start-highlight");
-    const firstInput=document.getElementById("income");
-    if(firstInput){
-      firstInput.focus({preventScroll:true});
-      firstInput.scrollIntoView({behavior:"smooth",block:"center"});
-    }
-  },650);
-}
-document.querySelectorAll(".js-start-diagnosis").forEach(el=>{
-  el.addEventListener("click",openDiagnosisForm);
+// v8: robust diagnosis CTA behavior
+document.querySelectorAll(".js-start-diagnosis").forEach(link=>{
+  link.addEventListener("click",event=>{
+    event.preventDefault();
+    const section=document.getElementById("diag");
+    if(!section) return;
+    section.classList.add("show");
+    const simpleTab=document.getElementById("simpleTab");
+    if(simpleTab) simpleTab.click();
+    section.scrollIntoView({behavior:"smooth",block:"start"});
+    setTimeout(()=>{
+      const firstInput=document.getElementById("income");
+      if(firstInput) firstInput.focus({preventScroll:true});
+    },650);
+  });
 });
 
 </script>
-<div class="start-toast" id="startToast">診断フォームを開きました</div><div class="sticky-mobile-cta"><a class="js-start-diagnosis" href="#diag" role="button">🚗 無料で診断する</a></div></body></html>
+<div class="sticky-mobile-cta"><a class="js-start-diagnosis" href="#diag">🚗 無料で診断する</a></div></body></html>
