@@ -1,1130 +1,245 @@
 <!doctype html>
 <html lang="ja">
 <head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X7TYP0B7E6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-X7TYP0B7E6');
-</script>
-
-<meta name="description" content="家計と欲しいクルマを入力すると、購入・維持できるか、現金一括・銀行ローン・残クレのどれが将来資産を残しやすいかを無料診断します。">
-<meta name="keywords" content="クルマ家計診断,車 買えるか,自動車ローン 比較,現金一括 銀行ローン,残クレ,車 維持費,資産形成">
-<meta name="author" content="きゃな｜資産形成とクルマ">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>クルマ家計診断｜車種・燃費・自動車税を自動入力</title>
+<meta name="description" content="欲しいクルマを選ぶと、車両価格・燃費・自動車税を自動入力。家計への負担と購入方法別の将来資産を無料診断します。">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://kuruma-kakei.vercel.app/">
-<link rel="icon" href="/favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="/favicon.png">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:site_name" content="クルマ家計診断 by きゃな">
-<meta property="og:title" content="クルマ家計診断｜好きなクルマも、資産最大化も。">
-<meta property="og:description" content="欲しいクルマを維持できるか、どの買い方が将来資産を残しやすいかを無料診断。">
+<meta property="og:title" content="クルマ家計診断｜好きなクルマも、資産形成も。">
+<meta property="og:description" content="車種を選ぶだけで燃費・自動車税を自動入力。現金一括・銀行ローン・残クレを比較。">
 <meta property="og:url" content="https://kuruma-kakei.vercel.app/">
-<meta property="og:image" content="https://kuruma-kakei.vercel.app/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="クルマ家計診断｜好きなクルマも、資産最大化も。">
-<meta name="twitter:description" content="家計と欲しいクルマを入力し、現金一括・銀行ローン・残クレを比較。">
-<meta name="twitter:image" content="https://kuruma-kakei.vercel.app/og-image.png">
-<meta name="twitter:site" content="@Kyana_ZZ">
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"WebApplication",
-  "name":"クルマ家計診断",
-  "url":"https://kuruma-kakei.vercel.app/",
-  "applicationCategory":"FinanceApplication",
-  "operatingSystem":"Web",
-  "description":"家計とクルマの条件から購入可否、維持費、購入方法別の将来資産を試算する無料Webアプリ。",
-  "offers":{"@type":"Offer","price":"0","priceCurrency":"JPY"},
-  "author":{"@type":"Person","name":"きゃな","sameAs":["https://note.com/kanash1226","https://x.com/Kyana_ZZ"]}
-}
-</script>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>クルマ家計診断｜車を買えるか・最適な購入方法を無料診断</title>
+<meta name="theme-color" content="#091626">
 <style>
-:root{--bg:#f4f7fb;--card:#fff;--ink:#122033;--muted:#667085;--line:#dfe5ee;--blue:#2d5cff;--navy:#102846;--green:#0d8a60;--yellow:#a97008;--red:#bd3838;--shadow:0 15px 36px rgba(16,40,70,.09)}
-*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;background:var(--bg);color:var(--ink)}
-.wrap{max-width:1160px;margin:auto;padding:0 18px}.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.topin{height:64px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:900}.brand span{color:var(--blue)}
-.hero{padding:66px 0 44px;background:radial-gradient(circle at 82% 15%,rgba(45,92,255,.16),transparent 34%),linear-gradient(#fff,#f4f7fb)}
-.herogrid,.grid,.about{display:grid;grid-template-columns:1fr 1fr;gap:20px}.eyebrow{display:inline-block;background:#eaf0ff;color:#2449b8;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:900}
-h1{font-size:clamp(38px,6vw,66px);line-height:1.05;margin:14px 0 18px}.lead{font-size:18px;line-height:1.8;color:var(--muted)}
-.quote{margin-top:20px;background:#fff;padding:17px 19px;border-left:5px solid var(--blue);border-radius:12px;box-shadow:var(--shadow);font-weight:800;line-height:1.7}
-.cta{display:inline-block;margin-top:22px;background:var(--blue);color:#fff;text-decoration:none;padding:14px 20px;border-radius:14px;font-weight:900}
-.dark{background:linear-gradient(145deg,#102846,#1f4b7c);color:#fff}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:23px;box-shadow:var(--shadow)}
-.dark .small{color:#cbd5e1}.section{padding:48px 0}.section h2{font-size:30px;margin:0 0 8px}.desc,.small{color:var(--muted);line-height:1.75}.features{display:grid;gap:13px}.feature{display:flex;gap:10px;align-items:flex-start}.dot{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.14);flex:0 0 auto}
-.form{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{position:relative}.full{grid-column:1/-1}label{display:block;font-size:13px;font-weight:900;margin-bottom:6px}
-input,select{width:100%;padding:12px 44px 12px 12px;border:1px solid #ccd6e4;border-radius:12px;font-size:16px;background:#fff}.unit{position:absolute;right:12px;bottom:13px;color:var(--muted);font-size:12px}
-button{width:100%;margin-top:16px;border:0;border-radius:14px;padding:15px;background:var(--blue);color:#fff;font-size:16px;font-weight:900;cursor:pointer}
-.scorebox{display:flex;align-items:center;gap:15px;background:#f8fafc;border:1px solid var(--line);border-radius:18px;padding:17px}.score{width:88px;height:88px;border-radius:50%;display:grid;place-items:center;background:#edf2ff;color:#2448b8;border:8px solid #cbd8ff;font-size:29px;font-weight:900}
-.badge{display:inline-block;padding:7px 10px;border-radius:999px;font-size:12px;font-weight:900}.g{background:#e7f9f2;color:#08724e}.y{background:#fff6dc;color:#805807}.r{background:#ffeded;color:#a42b2b}
-.metric{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}.metric span:first-child{color:var(--muted);font-size:14px}.metric b{font-size:19px}
-.comment{margin-top:15px;background:#111827;color:#eef2f7;border-radius:17px;padding:17px;line-height:1.8}.road{margin-top:16px;background:#f1f6ff;border:1px solid #cfe0ff;border-radius:17px;padding:16px}.roaditem{display:flex;gap:9px;margin-top:9px}.num{width:25px;height:25px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:900;flex:0 0 auto}
-.rec{border:1px solid var(--line);border-radius:15px;padding:14px;margin-top:10px}.rectop{display:flex;justify-content:space-between;gap:10px}.tag{background:#edf2ff;color:#2448b8;border-radius:999px;padding:4px 8px;font-size:11px;font-weight:900}.hidden{display:none}
-.profile{background:linear-gradient(145deg,#102846,#1f4b7c);color:#fff}.links{display:flex;gap:10px;margin-top:15px}.links a{background:rgba(255,255,255,.13);padding:9px 12px;border-radius:11px;text-decoration:none;color:#fff;font-weight:800;font-size:13px}
-footer{padding:26px 0 42px;color:var(--muted);font-size:12px;line-height:1.7}
-@media(max-width:850px){.herogrid,.grid,.about{grid-template-columns:1fr}.form{grid-template-columns:1fr}.full{grid-column:auto}}
-
-.hero{position:relative;overflow:hidden}
-.hero:before{pointer-events:none;content:"";position:absolute;inset:auto -120px -160px auto;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(49,94,251,.20),transparent 68%)}
-.hero:after{pointer-events:none;content:"";position:absolute;left:-120px;top:-160px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(16,40,69,.11),transparent 70%)}
-.mode-switch{display:flex;gap:8px;padding:6px;background:#eaf0f8;border-radius:14px;margin:18px 0 22px}
-.mode-switch button{margin:0;padding:11px 14px;background:transparent;color:var(--muted);box-shadow:none}
-.mode-switch button.active{background:#fff;color:var(--ink);box-shadow:0 8px 20px rgba(16,40,69,.10)}
-.detail-only.hidden,.simple-only.hidden{display:none!important}
-.panel-title{display:flex;align-items:center;gap:10px;margin:22px 0 10px;font-weight:900}
-.panel-title:before{content:"";width:5px;height:22px;border-radius:999px;background:linear-gradient(var(--blue),#7b61ff)}
-.result-hero{margin-top:16px;padding:22px;border-radius:20px;background:linear-gradient(135deg,#102845,#214d80);color:#fff}
-.result-hero .big{font-size:clamp(28px,5vw,44px);font-weight:900;letter-spacing:-.03em}
-.comparison-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
-.comparison-card{border:1px solid var(--line);border-radius:18px;padding:17px;background:#fff;position:relative}
-.comparison-card.winner{border:2px solid #d4a72c;box-shadow:0 14px 32px rgba(212,167,44,.16)}
-.crown{position:absolute;top:-11px;right:12px;background:linear-gradient(135deg,#e7c85d,#a66f07);color:#fff;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:900}
-.comparison-card h4{margin:0 0 8px}
-.kpi{font-size:28px;font-weight:900}
-.mini{font-size:12px;color:var(--muted)}
-.chart-card{margin-top:18px;padding:18px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(#fff,#f8fbff)}
-.chart{height:260px;display:flex;align-items:flex-end;gap:20px;padding:24px 10px 10px}
-.bar-group{flex:1;display:flex;align-items:flex-end;justify-content:center;gap:8px;height:100%}
-.bar{width:28%;min-width:22px;border-radius:10px 10px 3px 3px;background:linear-gradient(180deg,#315efb,#8ca7ff);position:relative}
-.bar.cash{background:linear-gradient(180deg,#15a879,#8fe0c1)}
-.bar.residual{background:linear-gradient(180deg,#d09a24,#f3d38a)}
-.bar-label{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);font-size:11px;font-weight:900;white-space:nowrap;margin-bottom:5px}
-.axis-label{text-align:center;font-size:12px;color:var(--muted);margin-top:8px}
-.db-card{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-.car-chip{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--line);border-radius:14px;background:#fff;cursor:pointer}
-.car-chip:hover{border-color:var(--blue);transform:translateY(-1px)}
-.car-icon{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#102845,#315efb);color:#fff;display:grid;place-items:center;font-size:21px}
-.summary-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
-.summary-box{padding:15px;border-radius:16px;background:#fff;border:1px solid var(--line)}
-.summary-box b{display:block;font-size:20px;margin-top:4px}
-.note-card{transition:.2s}
-.note-card:hover{transform:translateY(-3px);box-shadow:0 20px 40px rgba(16,40,69,.12)}
-@media(max-width:880px){
- .comparison-grid,.summary-strip,.db-card{grid-template-columns:1fr}
- .chart{height:220px;gap:8px}
-}
-
-
-:root{
-  --bg:#eef3f9;
-  --card:rgba(255,255,255,.88);
-  --ink:#0f1d31;
-  --muted:#6c778a;
-  --line:rgba(148,163,184,.26);
-  --navy:#0b1d35;
-  --navy2:#153a67;
-  --blue:#4d6fff;
-  --blue2:#7c5cff;
-  --cyan:#16b8d4;
-  --gold:#d6a73c;
-  --green:#13a477;
-  --yellow:#b98213;
-  --red:#c84646;
-  --soft-blue:#eef2ff;
-  --soft-green:#eafbf5;
-  --soft-yellow:#fff8e4;
-  --soft-red:#fff0f0;
-  --shadow:0 24px 70px rgba(15,29,49,.12);
-  --shadow-soft:0 14px 38px rgba(15,29,49,.08);
-}
-body{
-  background:
-    radial-gradient(circle at 15% 10%,rgba(77,111,255,.12),transparent 26%),
-    radial-gradient(circle at 90% 20%,rgba(22,184,212,.10),transparent 28%),
-    linear-gradient(180deg,#f8fbff 0%,#eef3f9 52%,#f7f9fc 100%);
-}
-.top{
-  background:rgba(248,251,255,.78);
-  border-bottom:1px solid rgba(255,255,255,.7);
-  box-shadow:0 8px 30px rgba(15,29,49,.04);
-}
-.topin{height:72px}
-.brand{font-size:18px}
-nav a{
-  padding:9px 12px;border-radius:999px;transition:.2s
-}
-nav a:hover{background:#fff;color:var(--ink);box-shadow:var(--shadow-soft)}
-.hero{
-  padding:82px 0 64px;
-  background:
-    linear-gradient(135deg,rgba(7,20,38,.98),rgba(21,58,103,.94)),
-    radial-gradient(circle at 75% 30%,rgba(77,111,255,.45),transparent 34%);
-  color:#fff;
-  min-height:650px;
-}
-.hero:before{pointer-events:none;
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(120deg,transparent 0 48%,rgba(255,255,255,.04) 48% 52%,transparent 52%),
-    repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0 1px,transparent 1px 74px);
-  opacity:.8;
-}
-.hero:after{pointer-events:none;
-  content:"";
-  position:absolute;
-  right:-80px;bottom:-60px;
-  width:610px;height:310px;
-  border-radius:55% 45% 22% 30% / 72% 62% 38% 28%;
-  background:
-    radial-gradient(circle at 28% 78%,#081323 0 7%,#111c2e 7% 12%,transparent 12%),
-    radial-gradient(circle at 73% 78%,#081323 0 7%,#111c2e 7% 12%,transparent 12%),
-    linear-gradient(165deg,rgba(255,255,255,.88),rgba(177,200,255,.28) 24%,rgba(61,93,159,.42) 58%,rgba(15,31,56,.88) 100%);
-  box-shadow:
-    inset -40px -30px 70px rgba(0,0,0,.35),
-    0 40px 80px rgba(0,0,0,.28);
-  transform:skewX(-8deg);
-  opacity:.92;
-}
-.hero .wrap{position:relative;z-index:2}
-.herogrid{grid-template-columns:1.08fr .92fr;align-items:center}
-.eyebrow{
-  background:rgba(255,255,255,.12);
-  color:#dbe6ff;
-  border:1px solid rgba(255,255,255,.18);
-  backdrop-filter:blur(12px);
-  letter-spacing:.06em
-}
-h1{
-  font-size:clamp(46px,7vw,82px);
-  color:#fff;
-  text-shadow:0 10px 30px rgba(0,0,0,.18)
-}
-.lead{color:#dce7f4;max-width:720px}
-.quote{
-  background:rgba(255,255,255,.10);
-  border:1px solid rgba(255,255,255,.16);
-  border-left:4px solid #8fa9ff;
-  color:#fff;
-  backdrop-filter:blur(16px);
-  box-shadow:none
-}
-.cta{
-  background:linear-gradient(135deg,#6d7cff,#8b5cf6);
-  box-shadow:0 18px 40px rgba(77,111,255,.34);
-  padding:15px 24px
-}
-.cta:hover{transform:translateY(-2px)}
-.dark{
-  background:rgba(255,255,255,.09);
-  border:1px solid rgba(255,255,255,.16);
-  backdrop-filter:blur(18px);
-  box-shadow:0 30px 70px rgba(0,0,0,.18)
-}
-.feature{
-  padding:12px;border-radius:16px;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.08)
-}
-.dot{
-  background:linear-gradient(135deg,#6d7cff,#16b8d4);
-  box-shadow:0 8px 18px rgba(77,111,255,.25)
-}
-.section{padding:66px 0}
-.section> .wrap > h2{
-  font-size:38px;letter-spacing:-.03em
-}
-.card{
-  background:var(--card);
-  backdrop-filter:blur(20px);
-  border:1px solid rgba(255,255,255,.76);
-  box-shadow:var(--shadow-soft);
-  border-radius:28px;
-}
-.card:hover{box-shadow:var(--shadow)}
-.mode-switch{
-  background:rgba(255,255,255,.62);
-  border:1px solid rgba(255,255,255,.75);
-  box-shadow:var(--shadow-soft);
-  backdrop-filter:blur(16px)
-}
-.mode-switch button{
-  border-radius:12px;
-  font-weight:900
-}
-.mode-switch button.active{
-  background:linear-gradient(135deg,#fff,#f1f5ff);
-  color:#23345b
-}
-.db-card{gap:16px}
-.car-chip{
-  min-height:88px;
-  border:1px solid rgba(148,163,184,.24);
-  box-shadow:0 10px 24px rgba(15,29,49,.05);
-  transition:.22s ease
-}
-.car-chip:hover{
-  transform:translateY(-4px);
-  box-shadow:0 18px 35px rgba(15,29,49,.10);
-  border-color:rgba(77,111,255,.45)
-}
-.car-icon{
-  width:52px;height:52px;
-  background:linear-gradient(135deg,#0b1d35,#4d6fff);
-  box-shadow:0 10px 24px rgba(77,111,255,.22)
-}
-input,select{
-  background:rgba(255,255,255,.9);
-  border:1px solid rgba(148,163,184,.30);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.8);
-  transition:.2s
-}
-input:hover,select:hover{border-color:rgba(77,111,255,.4)}
-input:focus,select:focus{
-  box-shadow:0 0 0 4px rgba(77,111,255,.12);
-  border-color:#6f85ff
-}
-button{
-  background:linear-gradient(135deg,#4d6fff,#7c5cff);
-  box-shadow:0 16px 32px rgba(77,111,255,.24);
-  transition:.2s
-}
-button:hover{transform:translateY(-2px);filter:none}
-.scorebox{
-  background:linear-gradient(135deg,#f9fbff,#edf3ff);
-  border:1px solid rgba(77,111,255,.16)
-}
-.score{
-  background:conic-gradient(#4d6fff 0 75%,#dbe4ff 75% 100%);
-  border:0;
-  color:#0b1d35;
-  box-shadow:inset 0 0 0 10px #f9fbff,0 12px 28px rgba(77,111,255,.18)
-}
-.metric{
-  margin:5px 0;
-  padding:12px 14px;
-  border:0;
-  border-radius:14px;
-  background:rgba(245,248,252,.8)
-}
-.comment{
-  background:linear-gradient(135deg,#0b1d35,#1b3c68);
-  box-shadow:0 18px 40px rgba(11,29,53,.22)
-}
-.road{
-  background:linear-gradient(135deg,#f6f8ff,#edf3ff);
-  border:1px solid rgba(77,111,255,.18)
-}
-.result-hero{
-  background:
-    radial-gradient(circle at 85% 20%,rgba(255,255,255,.16),transparent 32%),
-    linear-gradient(135deg,#0b1d35,#1b3c68 60%,#4d6fff);
-  box-shadow:0 22px 50px rgba(11,29,53,.24)
-}
-.comparison-card{
-  background:linear-gradient(180deg,#fff,#f8fbff);
-  box-shadow:0 12px 28px rgba(15,29,49,.06);
-  transition:.2s
-}
-.comparison-card:hover{transform:translateY(-3px)}
-.comparison-card.winner{
-  border:2px solid #d8af52;
-  background:linear-gradient(180deg,#fffdf6,#fff8e4);
-  box-shadow:0 18px 36px rgba(216,175,82,.20)
-}
-.chart-card{
-  background:
-    radial-gradient(circle at 80% 10%,rgba(77,111,255,.10),transparent 30%),
-    linear-gradient(180deg,#fff,#f7f9ff)
-}
-.summary-box{
-  background:linear-gradient(180deg,#fff,#f8fbff);
-  box-shadow:0 10px 22px rgba(15,29,49,.05)
-}
-.profile{
-  background:
-    radial-gradient(circle at 80% 15%,rgba(255,255,255,.14),transparent 28%),
-    linear-gradient(145deg,#0b1d35,#214d80);
-  box-shadow:0 24px 55px rgba(11,29,53,.22)
-}
-.note-card{
-  border:1px solid rgba(148,163,184,.24);
-  overflow:hidden;
-  position:relative
-}
-.note-card:before{
-  content:"";
-  position:absolute;inset:0 auto 0 0;width:5px;
-  background:linear-gradient(#4d6fff,#16b8d4)
-}
-footer{
-  background:#0b1d35;
-  color:#c8d3df;
-  padding:36px 0 48px
-}
-.sticky-mobile-cta{display:none}
-@media(max-width:880px){
-  .hero{min-height:auto;padding-bottom:420px}
-  .hero:after{pointer-events:none;width:430px;height:220px;right:-90px;bottom:40px}
-  .sticky-mobile-cta{
-    display:block;position:fixed;z-index:50;left:14px;right:14px;bottom:14px
-  }
-  .sticky-mobile-cta a{
-    display:block;text-align:center;text-decoration:none;color:#fff;
-    background:linear-gradient(135deg,#4d6fff,#7c5cff);
-    padding:15px;border-radius:16px;font-weight:900;
-    box-shadow:0 18px 40px rgba(77,111,255,.35)
-  }
-}
-
-
-/* v7 enhancements */
-html[data-theme="dark"]{
-  --bg:#08111f;--card:rgba(13,27,48,.90);--ink:#eef5ff;--muted:#a8b6c8;
-  --line:rgba(148,163,184,.18);--soft-blue:#17264a;--soft-green:#123a31;
-  --soft-yellow:#3a2d11;--soft-red:#3b1d23;
-}
-html[data-theme="dark"] body{
-  background:
-    radial-gradient(circle at 15% 10%,rgba(77,111,255,.16),transparent 26%),
-    radial-gradient(circle at 90% 20%,rgba(22,184,212,.12),transparent 28%),
-    linear-gradient(180deg,#08111f 0%,#0d1728 55%,#09111d 100%);
-}
-html[data-theme="dark"] .top{background:rgba(8,17,31,.82)}
-html[data-theme="dark"] input,
-html[data-theme="dark"] select{
-  background:rgba(9,19,34,.9);color:var(--ink)
-}
-html[data-theme="dark"] .metric,
-html[data-theme="dark"] .summary-box,
-html[data-theme="dark"] .comparison-card,
-html[data-theme="dark"] .car-chip{
-  background:rgba(14,28,49,.88)
-}
-html[data-theme="dark"] .scorebox,
-html[data-theme="dark"] .chart-card,
-html[data-theme="dark"] .road{
-  background:linear-gradient(135deg,#0d1d34,#102642)
-}
-.theme-toggle{
-  border:1px solid var(--line);background:rgba(255,255,255,.7);color:var(--ink);
-  border-radius:999px;padding:9px 12px;font-weight:800;cursor:pointer;box-shadow:none;margin:0;width:auto
-}
-html[data-theme="dark"] .theme-toggle{background:rgba(255,255,255,.08)}
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
-.reveal.show{opacity:1;transform:none}
-.vehicle-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.vehicle-card{position:relative;overflow:hidden;border-radius:20px;min-height:180px;padding:18px;color:#fff;
-  background:linear-gradient(145deg,#132d4f,#345bc4);box-shadow:var(--shadow-soft);cursor:pointer;transition:.25s}
-.vehicle-card:hover{transform:translateY(-5px) scale(1.01)}
-.vehicle-card:before{content:"";position:absolute;right:-18px;bottom:-18px;width:150px;height:78px;border-radius:52% 48% 25% 30% / 70% 60% 40% 30%;
-  background:linear-gradient(165deg,rgba(255,255,255,.95),rgba(168,197,255,.25) 35%,rgba(8,20,38,.9) 100%);
-  box-shadow:inset -22px -18px 35px rgba(0,0,0,.32)}
-.vehicle-card:after{content:"";position:absolute;right:16px;bottom:8px;width:18px;height:18px;border-radius:50%;
-  background:#08111f;box-shadow:-84px 0 0 #08111f}
-.vehicle-card h4{position:relative;z-index:2;margin:0 0 7px;font-size:18px}
-.vehicle-card .small{position:relative;z-index:2;color:#dce8ff}
-.ai-chat{margin-top:16px;padding:18px;border-radius:20px;background:linear-gradient(135deg,#f7f9ff,#edf3ff);border:1px solid rgba(77,111,255,.18)}
-html[data-theme="dark"] .ai-chat{background:linear-gradient(135deg,#0d1d34,#102642)}
-.ai-row{display:flex;gap:12px;align-items:flex-start}
-.ai-avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#4d6fff,#7c5cff);color:#fff;font-size:21px;flex:0 0 auto}
-.ai-bubble{padding:14px 16px;border-radius:4px 18px 18px 18px;background:#fff;box-shadow:0 10px 24px rgba(15,29,49,.07);line-height:1.75}
-html[data-theme="dark"] .ai-bubble{background:#132640}
-.line-chart-wrap{margin-top:18px;padding:18px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#fff,#f8fbff)}
-html[data-theme="dark"] .line-chart-wrap{background:linear-gradient(180deg,#0d1d34,#10223c)}
-#lineChart{width:100%;height:280px;display:block}
-#diag{scroll-margin-top:88px}
-.chart-legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--muted)}
-.legend-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
-.share-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-.secondary-btn{background:linear-gradient(135deg,#0b1d35,#214d80)}
-.ghost-btn{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
-.share-card{
-  position:fixed;left:-9999px;top:0;width:1200px;height:675px;padding:56px;
-  background:linear-gradient(135deg,#09182c,#214d80 58%,#4d6fff);color:#fff;
-}
-.share-card h2{font-size:54px;margin:0 0 18px}.share-card .share-method{font-size:72px;font-weight:900;margin:24px 0}
-.share-card .share-diff{font-size:34px}.share-card .share-footer{position:absolute;left:56px;bottom:42px;font-size:24px;color:#dbe7f5}
-@media(max-width:980px){.vehicle-gallery{grid-template-columns:1fr 1fr}}
-@media(max-width:650px){.vehicle-gallery{grid-template-columns:1fr}.share-actions{display:grid}.share-actions button{width:100%}}
-
-
-/* Ver1.2 visual and reliability overrides */
-:root{--v12-navy:#07182d;--v12-navy2:#123b70;--v12-blue:#566dff;--v12-cyan:#20bdd7;--v12-gold:#d8aa45}
-body{background:radial-gradient(circle at 8% 8%,rgba(86,109,255,.12),transparent 28%),radial-gradient(circle at 92% 18%,rgba(32,189,215,.10),transparent 30%),linear-gradient(180deg,#f7faff 0%,#eef3fa 55%,#f8fafc 100%)}
-.top{background:rgba(255,255,255,.92);box-shadow:0 8px 30px rgba(15,29,49,.06)}
-.hero{min-height:620px;padding:82px 0 70px;color:#fff;background:radial-gradient(circle at 84% 22%,rgba(86,109,255,.48),transparent 30%),radial-gradient(circle at 66% 76%,rgba(32,189,215,.20),transparent 30%),linear-gradient(135deg,#06162a 0%,#102f59 55%,#284f9a 100%)}
-.hero .lead{color:#d9e5f4}.hero h1{color:#fff;text-shadow:0 12px 34px rgba(0,0,0,.25)}
-.hero .eyebrow{color:#edf4ff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.20);backdrop-filter:blur(12px)}
-.hero .quote{color:#fff;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-left:4px solid #8da4ff;box-shadow:none;backdrop-filter:blur(14px)}
-.hero .dark{color:#fff!important;background:linear-gradient(150deg,rgba(5,20,39,.96),rgba(26,66,119,.93))!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:0 28px 70px rgba(0,0,0,.28)!important}
-.hero .dark h2,.hero .dark b{color:#fff!important}.hero .dark .small{color:#cbd9ea!important}
-.hero .feature{padding:14px 15px;border-radius:16px;background:rgba(255,255,255,.08)!important;border:1px solid rgba(255,255,255,.10)}
-.hero .dot{color:#fff;background:linear-gradient(135deg,var(--v12-blue),var(--v12-cyan));box-shadow:0 10px 24px rgba(86,109,255,.30)}
-.cta,.sticky-mobile-cta a,button{background:linear-gradient(135deg,var(--v12-blue),#855eea);box-shadow:0 16px 34px rgba(86,109,255,.28)}
-.section{padding:70px 0}.section h2{letter-spacing:-.03em}
-.card{border-radius:24px;border:1px solid rgba(255,255,255,.84);box-shadow:0 16px 44px rgba(15,29,49,.09)}
-.mode-switch{box-shadow:0 12px 30px rgba(15,29,49,.07)}
-.panel-title{padding:12px 14px;border-radius:14px;background:linear-gradient(90deg,rgba(86,109,255,.10),transparent)}
-input,select{min-height:48px}
-.scorebox{background:linear-gradient(135deg,#f8fbff,#edf2ff);border:1px solid rgba(86,109,255,.18)}
-.comment{background:linear-gradient(135deg,#07182d,#164477);color:#fff}
-.result-hero{background:radial-gradient(circle at 88% 15%,rgba(255,255,255,.18),transparent 30%),linear-gradient(135deg,#07182d,#164477 58%,#566dff)}
-.reveal{opacity:1!important;transform:none!important}.reveal.show{opacity:1!important;transform:none!important}
-#diag{scroll-margin-top:90px}
-.v12-step{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0 4px}
-.v12-step>div{padding:18px;border-radius:18px;background:#fff;border:1px solid rgba(148,163,184,.24);box-shadow:0 12px 28px rgba(15,29,49,.06)}
-.v12-step strong{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;color:#fff;background:linear-gradient(135deg,var(--v12-blue),#855eea);margin-bottom:10px}
-@media(max-width:880px){.hero{min-height:auto;padding:54px 0 390px}.v12-step{grid-template-columns:1fr}}
-
+:root{--bg:#f4f7fb;--card:#fff;--ink:#122033;--muted:#667085;--line:#dfe5ee;--blue:#5368f4;--violet:#845ef7;--navy:#091626;--green:#138a63;--gold:#b87912;--red:#c43d4d;--shadow:0 22px 60px rgba(16,40,70,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif}
+button,input,select{font:inherit}a{color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 20px}
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.topin{height:66px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:900}.brand span{color:var(--blue)}.nav{display:flex;gap:16px;font-size:14px}.nav a{text-decoration:none;color:var(--muted)}
+.hero{background:radial-gradient(circle at 82% 18%,rgba(93,111,255,.38),transparent 28%),linear-gradient(135deg,#07111f,#173e6b 64%,#4763cc);color:#fff;padding:78px 0 68px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:38px;align-items:center}.eyebrow{display:inline-block;padding:8px 12px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(255,255,255,.08);font-size:13px}
+h1{font-size:clamp(45px,7vw,78px);line-height:1.04;letter-spacing:-.05em;margin:18px 0}.hero p{max-width:690px;color:#d8e3f2;line-height:1.9;font-size:18px}.cta{border:0;border-radius:16px;padding:15px 22px;color:white;background:linear-gradient(135deg,var(--blue),var(--violet));font-weight:900;cursor:pointer;box-shadow:0 16px 34px rgba(81,103,246,.35)}
+.hero-card{background:rgba(8,20,37,.68);border:1px solid rgba(255,255,255,.16);border-radius:26px;padding:23px;box-shadow:0 30px 70px rgba(0,0,0,.23)}.hero-card h3{margin-top:0}.hero-list{display:grid;gap:10px}.hero-item{padding:13px;border-radius:15px;background:rgba(255,255,255,.07)}
+.section{padding:76px 0}.section h2{font-size:clamp(32px,5vw,50px);letter-spacing:-.04em;margin:0 0 12px}.lead{color:var(--muted);line-height:1.8;max-width:820px}
+.panel{background:white;border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);overflow:hidden}
+.panel-head{padding:24px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:center}
+.panel-body{padding:26px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.full{grid-column:1/-1}
+.field label{display:block;font-size:13px;font-weight:800;margin-bottom:7px}.field input,.field select{width:100%;height:50px;border:1px solid #dce3ee;border-radius:14px;background:#fbfcfe;padding:0 13px}.field input:focus,.field select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(83,104,244,.12)}
+.vehicle-preview{display:grid;grid-template-columns:1.05fr .95fr;gap:20px;margin-top:20px;padding:20px;border-radius:23px;background:linear-gradient(145deg,#0a1728,#214a7b);color:white}
+.vehicle-image{min-height:250px;border-radius:19px;background:#0d1b2d;overflow:hidden;display:grid;place-items:center;position:relative}.vehicle-image img{width:100%;height:100%;object-fit:cover;display:block}.vehicle-image .fallback{padding:24px;text-align:center;color:#cbd9e9}
+.vehicle-info h3{font-size:27px;margin:4px 0 14px}.specs{display:grid;grid-template-columns:1fr 1fr;gap:10px}.spec{padding:12px;border-radius:14px;background:rgba(255,255,255,.08)}.spec span{display:block;color:#c7d5e6;font-size:12px}.spec b{display:block;margin-top:4px}
+.notice{margin-top:12px;padding:12px 14px;border-radius:14px;background:#fff7e7;color:#7c520c;font-size:13px;line-height:1.7}.mini{font-size:12px;color:var(--muted);line-height:1.7}
+.actions{display:flex;justify-content:flex-end;gap:10px;margin-top:22px}.primary{border:0;border-radius:14px;padding:13px 19px;background:linear-gradient(135deg,var(--blue),var(--violet));color:white;font-weight:900;cursor:pointer}.secondary{border:1px solid var(--line);border-radius:14px;padding:13px 18px;background:white;font-weight:800;cursor:pointer}
+.result{display:none;margin-top:24px}.result.show{display:block}.result-hero{padding:26px;border-radius:23px;background:linear-gradient(135deg,#091626,#17446f 58%,#5368f4);color:white}.result-hero h3{font-size:34px;margin:5px 0}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:13px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:16px}.card span{font-size:12px;color:var(--muted)}.card b{display:block;margin-top:6px;font-size:20px}
+.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:13px}.method{background:white;border:1px solid var(--line);border-radius:18px;padding:18px}.method.winner{border:2px solid #d9a441;background:#fffaf0}.method strong{font-size:25px;display:block;margin:8px 0}
+.footer{background:#08111e;color:#bdcadb;padding:38px 0}.footer a{color:white}
+@media(max-width:820px){.hero-grid,.vehicle-preview{grid-template-columns:1fr}.nav{display:none}.grid,.cards,.method-grid{grid-template-columns:1fr 1fr}.vehicle-image{min-height:210px}}
+@media(max-width:560px){.grid,.cards,.method-grid,.specs{grid-template-columns:1fr}.full{grid-column:auto}.section{padding:58px 0}.panel-body{padding:18px}.hero{padding:58px 0}.actions{display:grid}.actions button{width:100%}}
 </style>
 </head>
 <body>
-<div class="top"><div class="wrap topin"><div class="brand">クルマ家計診断 <span>by きゃな</span></div><div class="small">好きなクルマも、資産形成も。</div></div></div>
+<header class="top"><div class="wrap topin"><div class="brand">クルマ家計診断 <span>by きゃな</span></div><nav class="nav"><a href="#diagnosis">診断</a><a href="#about">このサイトについて</a><a href="privacy.html">プライバシー</a></nav></div></header>
 
-<header class="hero"><div class="wrap herogrid">
-<div><span class="eyebrow">好きなクルマを諦めないための家計診断</span><h1>好きなクルマも、<br>資産最大化も。</h1>
-<p class="lead">「高いから無理」で終わらせず、今の家計で購入・維持できるか。難しい場合は、どうすれば手に入るかまで考えます。</p>
+<section class="hero"><div class="wrap hero-grid"><div>
+<span class="eyebrow">車種データ自動入力 Ver.2.1</span>
+<h1>好きなクルマも、<br>資産形成も。</h1>
+<p>車種・年式・グレードを選ぶと、車両価格、燃費、自動車税の概算を自動入力。家計への負担と、現金一括・銀行ローン・残クレの将来資産を比較します。</p>
+<button class="cta" onclick="document.getElementById('diagnosis').scrollIntoView({behavior:'smooth'})">無料で診断する</button>
+</div><aside class="hero-card"><h3>今回の更新内容</h3><div class="hero-list">
+<div class="hero-item"><b>✓ 車種選択データベース</b><br><small>メーカー → 車種 → グレードで選択</small></div>
+<div class="hero-item"><b>✓ 車両画像を自動表示</b><br><small>登録済み車種は選択時に切り替え</small></div>
+<div class="hero-item"><b>✓ 燃費を自動入力</b><br><small>実燃費の参考値を初期値として使用</small></div>
+<div class="hero-item"><b>✓ 自動車税を自動計算</b><br><small>登録年月・排気量・燃料・経年重課を考慮</small></div>
+</div></aside></div></section>
 
-<div style="display:flex;align-items:center;gap:14px;margin:22px 0 8px">
-  <img src="profile.png" alt="きゃな" style="width:58px;height:58px;border-radius:50%;border:3px solid rgba(255,255,255,.8)">
-  <div>
-    <div style="font-weight:800">きゃな｜資産形成とクルマ</div>
-    <div style="font-size:13px;color:#d6e4ff">資産形成 × クルマの情報を発信</div>
-  </div>
-</div>
-<div class="quote">簡単に諦めるのではなく、数字を見ながら「どうすれば実現できるか」を考える。</div>
-<a class="cta js-start-diagnosis" href="#diag">無料で診断する</a>
-<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;color:#c9d6e8;font-size:13px"><span>✓ 登録不要</span><span>✓ 約3分</span><span>✓ スマホ対応</span></div></div>
-<div class="card dark"><h2>診断でわかること</h2><div class="features">
-<div class="feature"><div class="dot">✓</div><div><b>今の家計で購入できるか</b><div class="small">ローン・維持費・生活費をまとめて判定</div></div></div>
-<div class="feature"><div class="dot">✓</div><div><b>積立を維持できるか</b><div class="small">資産形成を続けたまま買えるか確認</div></div></div>
-<div class="feature"><div class="dot">✓</div><div><b>どうすれば手に入るか</b><div class="small">必要な余力や準備期間の目安を表示</div></div></div>
-<div class="feature"><div class="dot">✓</div><div><b>代わりの選択肢</b><div class="small">新車・中古車の候補も表示</div></div></div>
-</div></div></div></header>
-<section class="reveal" style="margin-top:-34px;position:relative;z-index:4">
-  <div class="wrap">
-    <div class="summary-strip">
-      <div class="summary-box"><span class="small">診断できること</span><b>購入可否</b></div>
-      <div class="summary-box"><span class="small">比較できる方法</span><b>3パターン</b></div>
-      <div class="summary-box"><span class="small">見える未来</span><b>10年後資産</b></div>
-      <div class="summary-box"><span class="small">最終提案</span><b>最適な買い方</b></div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section reveal" id="vehicles"><div class="wrap">
-  <span class="eyebrow" style="background:var(--soft-blue);color:#2448b2;border:0">POPULAR CARS</span>
-  <h2 style="margin-top:12px">人気車種から診断</h2>
-  <p class="desc">車種カードを押すと、診断フォームへ価格・排気量・燃費を自動入力します。</p>
-  <div class="vehicle-gallery">
-    <div class="vehicle-card" data-name="レクサス RX350 F SPORT" data-price="760" data-engine="2.4" data-fuel="10.0"><h4>LEXUS RX</h4><div class="small">上質SUV × 高リセール</div></div>
-    <div class="vehicle-card" data-name="トヨタ ハリアー Z" data-price="520" data-engine="2.0" data-fuel="14.0"><h4>HARRIER</h4><div class="small">バランス型プレミアムSUV</div></div>
-    <div class="vehicle-card" data-name="トヨタ アルファード Z" data-price="620" data-engine="2.5" data-fuel="11.0"><h4>ALPHARD</h4><div class="small">ファミリー × 快適性</div></div>
-    <div class="vehicle-card" data-name="トヨタ RAV4 Adventure" data-price="450" data-engine="2.0" data-fuel="14.5"><h4>RAV4</h4><div class="small">実用性 × アウトドア</div></div>
-  </div>
-</div></section>
-
-<section class="section reveal" id="diag"><div class="wrap"><h2>クルマ家計診断</h2><p class="desc">まずは簡単診断。さらに詳しく見たい場合は詳細診断へ。現金一括・銀行ローン・残クレを比較し、将来資産が最も残りやすい買い方を提案します。</p>
+<section class="section" id="diagnosis"><div class="wrap">
+<h2>クルマ家計診断</h2><p class="lead">登録済みの人気車種から選べます。未登録車種は「その他・手入力」を選び、数値を修正できます。</p>
+<div class="panel">
+<div class="panel-head"><div><b>STEP 1　欲しいクルマを選択</b><div class="mini">車種選択後に価格・燃費・排気量・燃料区分を反映します。</div></div><span class="mini">入力内容は保存されません</span></div>
+<div class="panel-body">
 <div class="grid">
-<div class="card"><h3>家計と希望条件</h3>
-
-<div style="margin:18px 0 10px;font-weight:900;color:var(--blue)">収入・資産</div>
-<div class="form">
-  <div class="field"><label>手取り月収</label><input id="income" type="number" placeholder="例：35"><span class="unit">万円</span></div>
-  <div class="field"><label>年間手取りボーナス</label><input id="bonus" type="number" placeholder="例：100"><span class="unit">万円/年</span></div>
-  <div class="field"><label>金融資産</label><input id="assets" type="number" placeholder="例：500"><span class="unit">万円</span></div>
-  <div class="field"><label>毎月の積立額</label><input id="invest" type="number" placeholder="例：5"><span class="unit">万円</span></div>
-  <div class="field"><label>残したい生活防衛資金</label><input id="reserve" type="number" placeholder="例：200"><span class="unit">万円</span></div>
-  <div class="field"><label>既存ローン返済</label><input id="existing" type="number" placeholder="例：0"><span class="unit">万円/月</span></div>
+<div class="field"><label>メーカー</label><select id="maker"></select></div>
+<div class="field"><label>車種</label><select id="model"></select></div>
+<div class="field"><label>グレード</label><select id="grade"></select></div>
+<div class="field"><label>初回新規登録年月</label><input id="registrationMonth" type="month" value="2024-01"></div>
+<div class="field"><label>車両価格</label><input id="price" type="number"><span class="mini">万円</span></div>
+<div class="field"><label>実燃費参考値</label><input id="fuelEconomy" type="number" step=".1"><span class="mini">km/L</span></div>
+<div class="field"><label>排気量</label><input id="engineCc" type="number"><span class="mini">cc</span></div>
+<div class="field"><label>燃料・車種区分</label><select id="fuelType">
+<option value="gasoline">ガソリン</option><option value="diesel">ディーゼル</option><option value="hybrid">ハイブリッド</option><option value="phev">プラグインハイブリッド</option><option value="ev">電気自動車</option><option value="kei">軽自動車</option>
+</select></div>
+<div class="field"><label>自動車税（自動計算）</label><input id="annualTax" type="number"><span class="mini">円／年</span></div>
+<div class="field"><label>経年重課</label><input id="taxStatus" readonly></div>
 </div>
 
-<div class="detail-only panel-title">毎月の生活費</div>
-<div class="form detail-only">
-  <div class="field"><label>家賃・住宅ローン</label><input id="housing" type="number" placeholder="例：8"><span class="unit">万円/月</span></div>
-  <div class="field"><label>食費</label><input id="food" type="number" placeholder="例：5"><span class="unit">万円/月</span></div>
-  <div class="field"><label>水道・光熱費</label><input id="utilities" type="number" placeholder="例：2"><span class="unit">万円/月</span></div>
-  <div class="field"><label>通信費</label><input id="telecom" type="number" placeholder="例：1"><span class="unit">万円/月</span></div>
-  <div class="field"><label>保険・医療費（車以外）</label><input id="lifeInsurance" type="number" placeholder="例：1.5"><span class="unit">万円/月</span></div>
-  <div class="field"><label>教育費・保育費</label><input id="education" type="number" placeholder="例：0"><span class="unit">万円/月</span></div>
-  <div class="field"><label>日用品・衣服・娯楽</label><input id="discretionary" type="number" placeholder="例：4"><span class="unit">万円/月</span></div>
-  <div class="field"><label>その他の支出</label><input id="otherExpense" type="number" placeholder="例：2"><span class="unit">万円/月</span></div>
+<div class="vehicle-preview">
+<div class="vehicle-image"><img id="carImage" alt="選択車種の参考画像"><div class="fallback" id="imageFallback">車種を選択すると参考画像が表示されます。</div></div>
+<div class="vehicle-info"><small id="vehicleMaker">CAR DATA</small><h3 id="vehicleName">車種を選択してください</h3>
+<div class="specs">
+<div class="spec"><span>車両価格</span><b id="specPrice">—</b></div>
+<div class="spec"><span>実燃費参考</span><b id="specFuel">—</b></div>
+<div class="spec"><span>自動車税</span><b id="specTax">—</b></div>
+<div class="spec"><span>重課判定</span><b id="specStatus">—</b></div>
 </div>
-
-<div style="margin:22px 0 10px;font-weight:900;color:var(--blue)">欲しいクルマとローン</div>
-<div class="form">
-  <div class="field full"><label>欲しいクルマ</label><input id="car" placeholder="例：レクサス RX350 F SPORT"></div>
-  <div class="field"><label>車両価格</label><input id="price" type="number" placeholder="例：760"><span class="unit">万円</span></div>
-  <div class="field"><label>頭金</label><input id="down" type="number" placeholder="例：100"><span class="unit">万円</span></div>
-  <div class="field"><label>ローン金利</label><input id="rate" type="number" placeholder="例：2.0" step=".1"><span class="unit">%</span></div>
-  <div class="field"><label>返済期間</label><input id="years" type="number" placeholder="例：10"><span class="unit">年</span></div>
-  <div class="field"><label>保有予定期間</label><input id="hold" type="number" placeholder="例：5"><span class="unit">年</span></div>
-  <div class="field"><label>想定売却額</label><input id="resale" type="number" placeholder="例：400"><span class="unit">万円</span></div>
-</div>
-
-<div class="panel-title">購入方法と資産比較</div>
-<div class="form">
-  <div class="field"><label>比較する年数</label><input id="compareYears" type="number" placeholder="例：10" value="10"><span class="unit">年後</span></div>
-  <div class="field"><label>想定投資利回り</label><input id="investmentReturn" type="number" placeholder="例：7" value="7" step=".1"><span class="unit">%/年</span></div>
-  <div class="field"><label>銀行ローン金利</label><input id="bankRate" type="number" placeholder="例：2" value="2" step=".1"><span class="unit">%</span></div>
-  <div class="field"><label>銀行ローン年数</label><input id="bankYears" type="number" placeholder="例：10" value="10"><span class="unit">年</span></div>
-  <div class="field detail-only"><label>残クレ金利</label><input id="residualRate" type="number" placeholder="例：4.9" value="4.9" step=".1"><span class="unit">%</span></div>
-  <div class="field detail-only"><label>残クレ期間</label><input id="residualYears" type="number" placeholder="例：5" value="5"><span class="unit">年</span></div>
-  <div class="field detail-only"><label>残価率</label><input id="residualPercent" type="number" placeholder="例：45" value="45" step="1"><span class="unit">%</span></div>
-</div>
-
-<div class="detail-only panel-title">クルマの年間・月間維持費</div>
-<div class="form detail-only">
-  <div class="field"><label>排気量</label><input id="engine" type="number" placeholder="例：2.4" step=".1"><span class="unit">L</span></div>
-  <div class="field"><label>初度登録</label>
-    <select id="registration">
-      <option value="after2019" selected>2019年10月以降</option>
-      <option value="before2019">2019年9月以前</option>
-      <option value="kei">軽自動車</option>
-      <option value="ev">電気自動車・燃料電池車</option>
-    </select>
-  </div>
-  <div class="field"><label>年間自動車保険料</label><input id="carInsurance" type="number" placeholder="例：12"><span class="unit">万円/年</span></div>
-  <div class="field"><label>月極駐車場代</label><input id="parking" type="number" placeholder="例：1.5"><span class="unit">万円/月</span></div>
-  <div class="field"><label>年間走行距離</label><input id="mileage" type="number" placeholder="例：10000"><span class="unit">km/年</span></div>
-  <div class="field"><label>実燃費</label><input id="fuelEconomy" type="number" placeholder="例：10"><span class="unit">km/L</span></div>
-  <div class="field"><label>ガソリン価格</label><input id="fuelPrice" type="number" placeholder="例：175"><span class="unit">円/L</span></div>
-  <div class="field"><label>年間車検・整備・消耗品</label><input id="maintenanceAnnual" type="number" placeholder="例：12"><span class="unit">万円/年</span></div>
-  <div class="field"><label>診断モード</label>
-    <select id="mode"><option value="safe">安全重視</option><option value="balance" selected>バランス重視</option><option value="car">クルマ優先</option></select>
-  </div>
-</div>
-<button id="go">家計とクルマを診断する</button><p class="small">自動車税は排気量と初度登録区分から概算します。エコカー減税・重課・自治体独自の減免などは反映していません。</p></div>
-
-<div class="card"><h3>診断結果</h3>
-<div class="scorebox"><div class="score" id="score">--</div><div><div id="badge" class="badge y">未診断</div><h3 id="headline">条件を入力してください</h3><div id="sub" class="small"></div></div></div>
-<div style="margin-top:14px">
-<div class="metric"><span>毎月ローン返済</span><b id="loan">—</b></div>
-<div class="metric"><span>月間ガソリン代</span><b id="fuelMonthly">—</b></div>
-<div class="metric"><span>月間保険料</span><b id="insuranceMonthly">—</b></div>
-<div class="metric"><span>月間自動車税相当</span><b id="taxMonthly">—</b></div>
-<div class="metric"><span>月間駐車場代</span><b id="parkingMonthly">—</b></div>
-<div class="metric"><span>月間整備費相当</span><b id="maintenanceMonthly">—</b></div>
-<div class="metric"><span>車の月間総負担</span><b id="total">—</b></div>
-<div class="metric"><span>購入後の月間余力</span><b id="surplus">—</b></div>
-<div class="metric"><span>積立維持後の余力</span><b id="after">—</b></div>
-<div class="metric"><span>売却時の残債</span><b id="bal">—</b></div>
-<div class="metric"><span>売却時の手残り</span><b id="equity">—</b></div>
-</div>
-<div class="comment" id="comment"><b>診断コメント</b><br>診断すると、購入可否と家計への影響を表示します。</div>
-<div class="road hidden" id="road"><b>欲しいクルマを手に入れるための道筋</b><div id="roadlist"></div></div>
-<div class="road hidden" id="savingsBox" style="background:#fff8e7;border-color:#f2d58d"><b>家計の見直し候補</b><div id="savingsList"></div></div>
-<div class="result-hero hidden" id="bestMethodBox">
-  <div class="small" style="color:#cbd5e1">資産を最大化しやすい購入方法</div>
-  <div class="big" id="bestMethod">—</div>
-  <div id="bestMethodReason" style="margin-top:8px;line-height:1.7"></div>
-</div>
-<div class="comparison-grid hidden" id="comparisonGrid">
-  <div class="comparison-card" id="cashCard"><h4>現金一括</h4><div class="kpi" id="cashAsset">—</div><div class="mini">比較時点の純資産</div></div>
-  <div class="comparison-card" id="bankCard"><h4>銀行ローン</h4><div class="kpi" id="bankAsset">—</div><div class="mini">比較時点の純資産</div></div>
-  <div class="comparison-card" id="residualCard"><h4>残クレ</h4><div class="kpi" id="residualAsset">—</div><div class="mini">比較時点の純資産</div></div>
-</div>
-<div class="line-chart-wrap hidden" id="lineChartCard">
-  <b>10年間の資産推移</b>
-  <svg id="lineChart" viewBox="0 0 900 280" preserveAspectRatio="none"></svg>
-  <div class="chart-legend">
-    <span><i class="legend-dot" style="background:#13a477"></i>現金一括</span>
-    <span><i class="legend-dot" style="background:#4d6fff"></i>銀行ローン</span>
-    <span><i class="legend-dot" style="background:#d6a73c"></i>残クレ</span>
-  </div>
-</div>
-<div class="ai-chat hidden" id="aiAdvisor">
-  <div class="ai-row">
-    <div class="ai-avatar">🤖</div>
-    <div class="ai-bubble" id="aiAdvisorText">診断結果をもとに、おすすめ理由を表示します。</div>
-  </div>
-</div>
-<div class="share-actions hidden" id="shareActions">
-  <button type="button" class="secondary-btn" id="copyResultBtn">結果をコピー</button>
-  <button type="button" class="ghost-btn" id="downloadResultBtn">診断結果を画像保存</button>
-</div>
-<div class="chart-card hidden" id="assetChartCard">
-  <b>購入方法別・将来資産比較</b>
-  <div class="chart" id="assetChart"></div>
-  <div class="small">想定利回り・金利・売却価値は将来を保証するものではありません。</div>
-</div>
+<div class="notice">自動車税は自家用乗用車の標準税率による概算です。登録地域の減免、グリーン化特例、特殊用途、車検証上の区分などにより実額と異なる場合があります。</div>
 </div></div>
 
-<div class="card hidden" id="recbox" style="margin-top:20px"><h3>今の家計に合う代替候補</h3><p class="small">「買えない」で終わらせず、満足感や用途が近い候補を表示します。価格は試作用の目安です。</p><div id="recs"></div></div>
-</div></section>
-
-<section class="section"><div class="wrap"><h2>このサイトについて</h2><div class="about">
-<div class="card"><h3>夢を否定するための診断ではありません。</h3><p class="desc">クルマは大きなお金がかかる買い物です。欲しい気持ちだけでも、節約だけでも決められません。</p><p class="desc">今の家計で維持できるか。積立を続けられるか。難しいなら、あとどれくらい準備すればいいか。</p><p class="desc">数字を使って、好きなクルマを手に入れる現実的な道筋を考えるためのサイトです。</p></div>
-<div class="card profile" id="profile">
-  <div style="display:flex;gap:16px;align-items:center;margin-bottom:16px">
-    <img src="profile.png" alt="きゃなプロフィール" style="width:96px;height:96px;border-radius:50%;object-fit:cover;border:4px solid rgba(255,255,255,.9);box-shadow:0 12px 30px rgba(0,0,0,.25)">
-    <div>
-      <h3 style="margin:0 0 5px">きゃな ￤ 資産形成とクルマ</h3>
-      <div class="small" style="color:#dbe5f1">@Kyana_ZZ</div>
-    </div>
-  </div>
-  <p>30代前半の会社員。妻と2人暮らし。</p>
-  <p>26歳で約450万円の新車を現金一括購入し、資産はほぼゼロに。そこから投資と資産形成を続け、現在は資産5,000万円超。</p>
-  <p>クルマも人生も楽しみながら、お金との向き合い方を発信しています。</p>
-  <div class="links">
-    <a href="https://note.com/kanash1226" target="_blank" rel="noopener noreferrer">noteを見る</a>
-    <a href="https://x.com/Kyana_ZZ" target="_blank" rel="noopener noreferrer">Xを見る</a>
-  </div>
-</div></div>
-</div></div></section>
-
-
-<section class="section reveal" id="articles"><div class="wrap">
-  <span class="eyebrow" style="background:var(--soft-blue);color:#2448b2;border:0">READ MORE</span><h2 style="margin-top:12px">noteのおすすめ記事</h2>
-  <p class="desc">自己紹介と、クルマ・資産形成について読んでほしい記事を掲載しています。</p>
-  <div class="about">
-    <a class="card note-card" href="https://note.com/kanash1226/n/n50890093b24f" target="_blank" rel="noopener noreferrer" style="text-decoration:none">
-      <span class="eyebrow">まずはこちら</span>
-      <h3>【自己紹介】資産5,000万円を築くまで。そして、このnoteで伝えたいこと。</h3>
-      <p class="desc">資産形成を始めたきっかけと、クルマとお金について発信する理由。</p>
-      <b style="color:var(--blue)">noteで読む →</b>
-    </a>
-    <div>
-      <a class="card note-card" href="https://note.com/kanash1226/n/nb7d707d7099e" target="_blank" rel="noopener noreferrer" style="display:block;text-decoration:none;margin-bottom:14px">
-        <span class="eyebrow">クルマとローン</span>
-        <h3>760万円のレクサスRX。それでも私がフルローンを選ぶ理由</h3>
-        <b style="color:var(--blue)">noteで読む →</b>
-      </a>
-      <a class="card note-card" href="https://note.com/kanash1226/n/n9622721e98fa" target="_blank" rel="noopener noreferrer" style="display:block;text-decoration:none">
-        <span class="eyebrow">資産形成</span>
-        <h3>私が絶対に破らなかった8つの投資ルール</h3>
-        <b style="color:var(--blue)">noteで読む →</b>
-      </a>
-    </div>
-  </div>
-</div></section>
-
-
-<div class="share-card" id="shareCard">
-  <div style="display:flex;align-items:center;gap:18px">
-    <img src="profile.png" alt="きゃな" style="width:92px;height:92px;border-radius:50%;border:4px solid rgba(255,255,255,.85)">
-    <div><div style="font-size:24px;font-weight:800">クルマ家計診断 by きゃな</div><div style="font-size:20px;color:#dbe7f5">好きなクルマも、資産最大化も。</div></div>
-  </div>
-  <h2 style="margin-top:70px">あなたにおすすめの購入方法</h2>
-  <div class="share-method" id="shareMethod">銀行ローン</div>
-  <div class="share-diff" id="shareDiff">10年後、現金一括より○万円有利</div>
-  <div class="share-footer">note.com/kanash1226　｜　X @Kyana_ZZ</div>
+<h3 style="margin-top:30px">STEP 2　家計・購入条件</h3>
+<div class="grid">
+<div class="field"><label>手取り月収</label><input id="income" type="number" value="40"><span class="mini">万円</span></div>
+<div class="field"><label>毎月の生活費</label><input id="living" type="number" value="23"><span class="mini">万円</span></div>
+<div class="field"><label>金融資産</label><input id="assets" type="number" value="1000"><span class="mini">万円</span></div>
+<div class="field"><label>毎月の積立額</label><input id="invest" type="number" value="10"><span class="mini">万円</span></div>
+<div class="field"><label>頭金</label><input id="down" type="number" value="100"><span class="mini">万円</span></div>
+<div class="field"><label>保有予定期間</label><input id="holdYears" type="number" value="5"><span class="mini">年</span></div>
+<div class="field"><label>想定売却額</label><input id="resale" type="number" value="300"><span class="mini">万円</span></div>
+<div class="field"><label>年間走行距離</label><input id="mileage" type="number" value="10000"><span class="mini">km</span></div>
+<div class="field"><label>ガソリン価格</label><input id="fuelPrice" type="number" value="175"><span class="mini">円/L</span></div>
+<div class="field"><label>年間保険料</label><input id="insurance" type="number" value="12"><span class="mini">万円</span></div>
+<div class="field"><label>月極駐車場</label><input id="parking" type="number" value="1.5"><span class="mini">万円</span></div>
+<div class="field"><label>年間車検・整備費</label><input id="maintenance" type="number" value="12"><span class="mini">万円</span></div>
+<div class="field"><label>銀行ローン金利</label><input id="bankRate" type="number" value="2" step=".1"><span class="mini">%</span></div>
+<div class="field"><label>銀行ローン期間</label><input id="bankYears" type="number" value="10"><span class="mini">年</span></div>
+<div class="field"><label>残クレ金利</label><input id="residualRate" type="number" value="4.9" step=".1"><span class="mini">%</span></div>
+<div class="field"><label>残価率</label><input id="residualPct" type="number" value="45"><span class="mini">%</span></div>
+<div class="field"><label>想定投資利回り</label><input id="returnRate" type="number" value="7" step=".1"><span class="mini">%</span></div>
+<div class="field"><label>比較期間</label><input id="compareYears" type="number" value="10"><span class="mini">年</span></div>
 </div>
+<div class="actions"><button class="secondary" id="recalcTax">自動車税を再計算</button><button class="primary" id="diagnoseBtn">診断結果を見る</button></div>
+</div></div>
 
-<footer><div class="wrap">
-<div style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
-<div style="max-width:760px"><b style="color:#fff">クルマ家計診断 by きゃな</b><p>診断結果は参考情報です。ローン審査、投資成果、将来の収入、金利、税金、リセール、維持費を保証するものではありません。</p></div>
-<div style="display:flex;gap:14px;flex-wrap:wrap"><a href="privacy.html" style="color:#dbe7f5">プライバシーポリシー</a><a href="contact.html" style="color:#dbe7f5">お問い合わせ</a><a href="https://note.com/kanash1226" target="_blank" rel="noopener noreferrer" style="color:#dbe7f5">note</a><a href="https://x.com/Kyana_ZZ" target="_blank" rel="noopener noreferrer" style="color:#dbe7f5">X</a></div>
-</div><div style="margin-top:18px;border-top:1px solid rgba(255,255,255,.12);padding-top:14px">© 2026 クルマ家計診断 by きゃな</div></div></footer>
+<div class="result" id="result">
+<div class="result-hero"><small>資産を残しやすい購入方法</small><h3 id="bestMethod">—</h3><p id="bestReason"></p></div>
+<div class="cards">
+<div class="card"><span>月々の銀行ローン</span><b id="monthlyLoan">—</b></div>
+<div class="card"><span>月間維持費</span><b id="monthlyCost">—</b></div>
+<div class="card"><span>積立後の余力</span><b id="monthlyFree">—</b></div>
+<div class="card"><span>購入可能度</span><b id="score">—</b></div>
+</div>
+<div class="method-grid">
+<div class="method" id="cashCard"><span>現金一括</span><strong id="cashAsset">—</strong><small>比較時点の概算純資産</small></div>
+<div class="method" id="bankCard"><span>銀行ローン</span><strong id="bankAsset">—</strong><small>比較時点の概算純資産</small></div>
+<div class="method" id="residualCard"><span>残クレ</span><strong id="residualAsset">—</strong><small>比較時点の概算純資産</small></div>
+</div>
+<p class="mini">※投資成果、金利、税金、実燃費、修理費、売却価格は保証されません。診断結果は意思決定の参考値です。</p>
+</div>
+</div></section>
+
+<section class="section" id="about"><div class="wrap"><h2>今回のデータ範囲</h2><p class="lead">現在は試験版として人気車種を登録しています。将来は正式な車両データ提供元との契約により、国産車・輸入車・過去モデルまで拡張する設計です。カーセンサー掲載情報を無断取得する仕様にはしていません。</p></div></section>
+<footer class="footer"><div class="wrap">クルマ家計診断 by きゃな　｜　<a href="privacy.html">プライバシーポリシー</a>　<a href="contact.html">お問い合わせ</a></div></footer>
 
 <script>
-const f=v=>`${new Intl.NumberFormat("ja-JP",{maximumFractionDigits:1}).format(v)}万円`;
-const yen=v=>`${new Intl.NumberFormat("ja-JP",{maximumFractionDigits:0}).format(v)}円`;
-
-function pmt(p,a,y){
-  if(!p || !y) return 0;
-  const n=y*12,r=a/100/12;
-  if(r===0)return p/n;
-  return p*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)
-}
-function balance(p,a,y,k){
-  if(!p || !y) return 0;
-  const n=y*12,r=a/100/12,k2=Math.min(k,n);
-  if(r===0)return Math.max(0,p*(n-k2)/n);
-  const pay=pmt(p,a,y);
-  return Math.max(0,p*Math.pow(1+r,k2)-pay*(Math.pow(1+r,k2)-1)/r)
-}
-function annualCarTax(engine, registration){
-  if(registration==="kei") return 1.08;
-  if(registration==="ev") return 2.5;
-  const newer=registration==="after2019";
-  if(engine<=1.0) return newer?2.5:2.95;
-  if(engine<=1.5) return newer?3.05:3.45;
-  if(engine<=2.0) return newer?3.6:3.95;
-  if(engine<=2.5) return newer?4.35:4.5;
-  if(engine<=3.0) return newer?5.0:5.1;
-  if(engine<=3.5) return newer?5.7:5.8;
-  if(engine<=4.0) return newer?6.55:6.65;
-  if(engine<=4.5) return newer?7.55:7.65;
-  if(engine<=6.0) return newer?8.7:8.8;
-  return newer?11.0:11.1;
-}
-const cars=[
-{name:"レクサス RX 認定中古車",type:"中古",price:580,note:"希望車に近い満足感を保ちながら購入価格を抑える案。"},
-{name:"レクサス NX",type:"新車・中古",price:600,note:"レクサスらしい上質感を残しつつRXより負担を抑えやすい。"},
-{name:"トヨタ ハリアー",type:"新車・中古",price:500,note:"上質感・実用性・リセールのバランスを取りやすいSUV。"},
-{name:"クラウンスポーツ 中古",type:"中古",price:540,note:"デザインと上質感を重視する人向け。"},
-{name:"トヨタ RAV4",type:"新車・中古",price:430,note:"実用性を重視しながら購入負担を抑えやすい。"}
+const DB = [
+{maker:"レクサス",model:"RX",grade:"RX350 F SPORT",price:760,fuel:9.5,cc:2393,type:"gasoline",resale:500,img:"https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1200&q=80"},
+{maker:"レクサス",model:"NX",grade:"NX350 F SPORT",price:650,fuel:10.4,cc:2393,type:"gasoline",resale:420,img:"https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80"},
+{maker:"トヨタ",model:"アルファード",grade:"Z ガソリン",price:620,fuel:9.8,cc:2493,type:"gasoline",resale:450,img:"https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1200&q=80"},
+{maker:"トヨタ",model:"ハリアー",grade:"Z",price:520,fuel:13.8,cc:1986,type:"gasoline",resale:340,img:"https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1200&q=80"},
+{maker:"トヨタ",model:"RAV4",grade:"Adventure",price:450,fuel:13.5,cc:1986,type:"gasoline",resale:290,img:"https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80"},
+{maker:"トヨタ",model:"ランドクルーザー250",grade:"ZX",price:735,fuel:8.5,cc:2754,type:"diesel",resale:650,img:"https://images.unsplash.com/photo-1539795845756-4fadad2905ec?auto=format&fit=crop&w=1200&q=80"},
+{maker:"トヨタ",model:"プリウス",grade:"Z",price:460,fuel:25.0,cc:1986,type:"hybrid",resale:300,img:"https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&w=1200&q=80"},
+{maker:"日産",model:"セレナ",grade:"e-POWER ハイウェイスターV",price:390,fuel:18.0,cc:1433,type:"hybrid",resale:235,img:"https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1200&q=80"},
+{maker:"ホンダ",model:"ヴェゼル",grade:"e:HEV Z",price:330,fuel:21.0,cc:1496,type:"hybrid",resale:220,img:"https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=80"},
+{maker:"マツダ",model:"CX-60",grade:"XD-HYBRID Premium Sports",price:570,fuel:16.5,cc:3283,type:"diesel",resale:310,img:"https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80"},
+{maker:"スズキ",model:"ジムニー",grade:"XC",price:205,fuel:13.5,cc:658,type:"kei",resale:175,img:"https://images.unsplash.com/photo-1504215680853-026ed2a45def?auto=format&fit=crop&w=1200&q=80"},
+{maker:"テスラ",model:"Model Y",grade:"RWD",price:560,fuel:0,cc:0,type:"ev",resale:280,img:"https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1200&q=80"},
+{maker:"その他",model:"その他・手入力",grade:"手入力",price:300,fuel:12,cc:1800,type:"gasoline",resale:150,img:""}
 ];
-function cfg(m){return {safe:{ratio:.15,min:8,months:12},balance:{ratio:.22,min:3,months:6},car:{ratio:.30,min:0,months:4}}[m]}
-function calcScore(d){
-  const c=cfg(d.mode);let s=100,ratio=d.total/d.income;
-  if(ratio>c.ratio)s-=Math.min(38,(ratio-c.ratio)*150);
-  if(d.after<c.min)s-=Math.min(30,(c.min-d.after)*3);
-  if(d.assets-d.down<d.reserve)s-=28;
-  if(d.equity<0)s-=14;
-  const months=(d.assets-d.down)/Math.max(1,d.living+d.existing+d.total);
-  if(months<c.months)s-=Math.min(25,(c.months-months)*2);
-  return Math.max(0,Math.round(s))
+
+const $=id=>document.getElementById(id);
+const maker=$("maker"),model=$("model"),grade=$("grade");
+const fmtMan=v=>`${Math.round(v).toLocaleString("ja-JP")}万円`;
+const unique=a=>[...new Set(a)];
+
+function setOptions(el,items){el.innerHTML=items.map(x=>`<option value="${x}">${x}</option>`).join("")}
+function currentCars(){return DB.filter(x=>x.maker===maker.value)}
+function currentModels(){return currentCars().filter(x=>x.model===model.value)}
+function currentCar(){return currentModels().find(x=>x.grade===grade.value)||currentModels()[0]||DB[0]}
+
+function refreshMaker(){
+ setOptions(maker,unique(DB.map(x=>x.maker))); refreshModel();
 }
-function roadmap(d,s){
-  let x=[];
-  if(s>=80){
-    x=["販売店の見積もりでローン・保険・税金・維持費を最終確認する。","金利上昇やリセール低下を想定し、毎月数万円の余裕を残す。","購入後も積立額を無理なく維持できるか3か月ほど確認する。"]
-  }else{
-    const need=Math.max(0,3-d.after),cash=Math.max(0,d.reserve-(d.assets-d.down)),wait=Math.ceil((need*12+cash)/Math.max(1,d.invest));
-    if(need>0)x.push(`毎月あと約${f(need)}の余力を作る。家計見直し候補を下で確認する。`);
-    if(cash>0)x.push(`生活防衛資金をあと約${f(cash)}確保する。`);
-    if(wait>0&&wait<60)x.push(`現在の積立ペースなら、約${wait}か月準備すると条件が改善します。`);
-    x.push("認定中古車や1グレード下も比較し、満足感を落とさず負担を下げる。")
-  }
-  return x.slice(0,4)
+function refreshModel(){
+ setOptions(model,unique(currentCars().map(x=>x.model))); refreshGrade();
 }
-function savingsSuggestions(d){
-  const items=[];
-  const add=(label,value,target,message)=>{
-    if(value>target){
-      const possible=Math.max(0,value-target);
-      items.push({label,possible,message});
-    }
-  };
-  add("通信費",d.telecom,1.0,"格安SIMや不要な回線・端末補償を見直す余地があります。");
-  add("水道・光熱費",d.utilities,2.5,"電力・ガスプランや契約アンペアを確認してみてください。");
-  add("食費",d.food,6.0,"外食・コンビニ・定期購入を分けて確認すると削減箇所が見えます。");
-  add("日用品・衣服・娯楽",d.discretionary,5.0,"満足度の低いサブスクや衝動買いから見直すのがおすすめです。");
-  add("保険・医療費",d.lifeInsurance,2.0,"保障の重複や貯蓄型保険の内容を確認してください。");
-  add("家賃・住宅費",d.housing,d.income*0.30,"更新や引っ越しのタイミングなら、手取り30％以内を一つの目安に比較できます。");
-  if(d.parking>2.0) items.push({label:"駐車場代",possible:Math.max(0,d.parking-2.0),message:"自宅から少し離れた月極や勤務先補助も比較候補です。"});
-  if(d.carInsurance/12>1.5) items.push({label:"自動車保険",possible:Math.max(0,d.carInsurance/12-1.5),message:"年齢条件、運転者範囲、車両保険、走行距離区分を比較してください。"});
-  return items.sort((a,b)=>b.possible-a.possible).slice(0,5);
+function refreshGrade(){
+ setOptions(grade,currentModels().map(x=>x.grade)); applyCar();
 }
+function applyCar(){
+ const c=currentCar();
+ $("price").value=c.price;$("fuelEconomy").value=c.fuel;$("engineCc").value=c.cc;$("fuelType").value=c.type;$("resale").value=c.resale;
+ $("vehicleMaker").textContent=c.maker.toUpperCase();$("vehicleName").textContent=`${c.maker} ${c.model} ${c.grade}`;
+ if(c.img){$("carImage").src=c.img;$("carImage").style.display="block";$("imageFallback").style.display="none"}else{$("carImage").removeAttribute("src");$("carImage").style.display="none";$("imageFallback").style.display="block"}
+ calculateTax();updatePreview();
+}
+maker.addEventListener("change",refreshModel);model.addEventListener("change",refreshGrade);grade.addEventListener("change",applyCar);
+
+const normalNew=[[1000,25000],[1500,30500],[2000,36000],[2500,43500],[3000,50000],[3500,57000],[4000,65500],[4500,75500],[6000,87000],[Infinity,110000]];
+const normalOld=[[1000,29500],[1500,34500],[2000,39500],[2500,45000],[3000,51000],[3500,58000],[4000,66500],[4500,76500],[6000,88000],[Infinity,111000]];
+function baseTax(cc,isNew){const table=isNew?normalNew:normalOld;return table.find(x=>cc<=x[0])[1]}
+function yearsElapsed(reg){
+ const [y,m]=reg.split("-").map(Number); if(!y)return 0;
+ const now=new Date(); return (now.getFullYear()-y)+((now.getMonth()+1)>=m?0:-1);
+}
+function calculateTax(){
+ const reg=$("registrationMonth").value||"2024-01",type=$("fuelType").value,cc=+$("engineCc").value||0;
+ const isNew=reg>="2019-10"; let tax=0,status="対象外";
+ if(type==="kei"){tax=10800;const age=yearsElapsed(reg);if(age>=13){tax=12900;status="13年超重課"}}
+ else if(type==="ev"){tax=25000;status="経年重課対象外"}
+ else{
+   tax=baseTax(cc,isNew);
+   const age=yearsElapsed(reg);
+   const threshold=type==="diesel"?11:13;
+   const exempt=["hybrid","phev"].includes(type);
+   if(!exempt && age>=threshold){tax=Math.round(tax*1.15/100)*100;status=`${threshold}年超重課`}
+   else if(exempt){status="経年重課対象外"}
+   else status=`対象外（登録から${age}年）`;
+ }
+ $("annualTax").value=tax;$("taxStatus").value=status;updatePreview();
+}
+["registrationMonth","fuelType","engineCc"].forEach(id=>$(id).addEventListener("change",calculateTax));
+$("recalcTax").addEventListener("click",calculateTax);
+
+function updatePreview(){
+ $("specPrice").textContent=fmtMan(+$("price").value||0);
+ const f=+$("fuelEconomy").value||0;$("specFuel").textContent=f?`${f} km/L`:"EV";
+ $("specTax").textContent=`${(+$("annualTax").value||0).toLocaleString("ja-JP")}円/年`;
+ $("specStatus").textContent=$("taxStatus").value||"—";
+}
+["price","fuelEconomy","annualTax"].forEach(id=>$(id).addEventListener("input",updatePreview));
+
+function pmt(principal,annual,years){
+ const n=Math.max(1,years*12),r=annual/100/12;if(!r)return principal/n;return principal*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)
+}
+function fv(v,rate,years){return v*Math.pow(1+rate/100,years)}
 function diagnose(){
-  const v=id=>+document.getElementById(id).value||0;
-  const monthlyIncome=v("income"), annualBonus=v("bonus"), price=v("price");
-  if(!monthlyIncome || !price){alert("手取り月収と車両価格を入力してください。");return;}
-  const expenses={
-    housing:v("housing"),food:v("food"),utilities:v("utilities"),telecom:v("telecom"),
-    lifeInsurance:v("lifeInsurance"),education:v("education"),discretionary:v("discretionary"),
-    otherExpense:v("otherExpense")
-  };
-  const living=Object.values(expenses).reduce((a,b)=>a+b,0);
-  const engine=v("engine"), registration=document.getElementById("registration").value;
-  const carInsurance=v("carInsurance"), parking=v("parking"), mileage=v("mileage"),
-        fuelEconomy=v("fuelEconomy"), fuelPrice=v("fuelPrice"), maintenanceAnnual=v("maintenanceAnnual");
-  const fuelAnnualYen=(mileage>0&&fuelEconomy>0)?(mileage/fuelEconomy)*fuelPrice:0;
-  const fuelMonthly=fuelAnnualYen/12/10000;
-  const insuranceMonthly=carInsurance/12;
-  const taxAnnual=annualCarTax(engine,registration);
-  const taxMonthly=taxAnnual/12;
-  const maintenanceMonthly=maintenanceAnnual/12;
-
-  const d={
-    income:monthlyIncome+annualBonus/12,monthlyIncome,annualBonus,
-    assets:v("assets"),invest:v("invest"),reserve:v("reserve"),existing:v("existing"),
-    ...expenses,living,price,down:Math.min(v("down"),price),rate:v("rate"),years:v("years"),
-    hold:v("hold"),resale:v("resale"),mode:document.getElementById("mode").value,
-    car:document.getElementById("car").value||"希望車",engine,registration,carInsurance,
-    parking,mileage,fuelEconomy,fuelPrice,maintenanceAnnual,fuelMonthly,insuranceMonthly,
-    taxAnnual,taxMonthly,maintenanceMonthly
-  };
-  d.principal=Math.max(0,d.price-d.down);
-  d.loan=pmt(d.principal,d.rate,d.years);
-  d.ownership=fuelMonthly+insuranceMonthly+taxMonthly+parking+maintenanceMonthly;
-  d.total=d.loan+d.ownership;
-  d.surplus=d.income-d.living-d.existing-d.total;
-  d.after=d.surplus-d.invest;
-  d.bal=balance(d.principal,d.rate,d.years,d.hold*12);
-  d.equity=d.resale-d.bal;
-  const s=calcScore(d),ratio=Math.round(d.total/d.income*100);
-
-  document.getElementById("score").textContent=s;
-  const b=document.getElementById("badge");
-  b.className="badge "+(s>=80?"g":s>=60?"y":"r");
-  b.textContent=s>=80?"購入可能性が高い":s>=60?"条件調整で狙える":"今すぐは負担が大きい";
-  document.getElementById("headline").textContent=s>=80?`${d.car}を維持できる見込みです`:s>=60?`${d.car}は条件調整で狙えます`:`${d.car}は準備してからが安心です`;
-  document.getElementById("sub").textContent=`診断モード：${d.mode==="safe"?"安全重視":d.mode==="balance"?"バランス重視":"クルマ優先"} ／ ボーナスは月割り`;
-
-  const resultMap={
-    loan:d.loan,fuelMonthly:d.fuelMonthly,insuranceMonthly:d.insuranceMonthly,taxMonthly:d.taxMonthly,
-    parkingMonthly:d.parking,maintenanceMonthly:d.maintenanceMonthly,total:d.total,surplus:d.surplus,
-    after:d.after,bal:d.bal,equity:d.equity
-  };
-  Object.entries(resultMap).forEach(([id,val])=>document.getElementById(id).textContent=f(val));
-
-  document.getElementById("comment").innerHTML=s>=80
-    ?`<b>購入可能性は高いです。</b><br>${d.car}の月間総負担は約${f(d.total)}で、手取り＋ボーナス月割りの約${ratio}%です。生活費${f(d.living)}と現在の積立を維持しても、約${f(d.after)}の余力があります。`
-    :s>=60
-    ?`<b>条件を少し調整すれば狙えます。</b><br>クルマの月間総負担は約${f(d.total)}です。積立維持後の余力は約${f(d.after)}のため、家計の一部・購入時期・車両価格を比較してください。`
-    :`<b>今すぐの購入は負担が大きめです。</b><br>クルマの月間総負担は約${f(d.total)}です。現在の積立を維持すると約${f(Math.abs(d.after))}不足します。下の家計見直し候補と実現までの道筋を確認してください。`;
-
-  const road=document.getElementById("road");
-  road.classList.remove("hidden");
-  document.getElementById("roadlist").innerHTML=roadmap(d,s).map((t,i)=>`<div class="roaditem"><div class="num">${i+1}</div><div>${t}</div></div>`).join("");
-
-  const savings=savingsSuggestions(d);
-  const sb=document.getElementById("savingsBox");
-  sb.classList.remove("hidden");
-  document.getElementById("savingsList").innerHTML=savings.length
-    ?savings.map((x,i)=>`<div class="roaditem"><div class="num">${i+1}</div><div><b>${x.label}</b>：月約${f(x.possible)}の見直し余地。${x.message}</div></div>`).join("")
-    :`<div class="roaditem"><div class="num">✓</div><div>入力された生活費には大きく突出した項目がありません。積立額・車両価格・購入時期の調整を優先して検討してください。</div></div>`;
-
-  const box=document.getElementById("recbox"),recs=document.getElementById("recs");
-  if(s>=80){box.classList.add("hidden")}
-  else{
-    box.classList.remove("hidden");
-    const affordable=Math.max(3,(d.income-d.living-d.existing-d.invest)*.9);
-    const opts=cars.map(c=>({...c,monthly:pmt(c.price,2,10)+Math.max(3,d.ownership*.8)})).filter(c=>c.monthly<=affordable*1.15).slice(0,4);
-    recs.innerHTML=opts.length?opts.map(c=>`<div class="rec"><div class="rectop"><b>${c.name}</b><span class="tag">${c.type}</span></div><div class="small">目安価格 ${f(c.price)} ／ 月間負担目安 ${f(c.monthly)}</div><div style="margin-top:7px">${c.note}</div></div>`).join(""):"<div class='rec'>条件に合う候補が見つかりませんでした。予算や積立額を見直してください。</div>";
-  }
+ calculateTax();
+ const price=+$("price").value||0,down=+$("down").value||0,assets=+$("assets").value||0,ret=+$("returnRate").value||0,compare=+$("compareYears").value||10;
+ const bankRate=+$("bankRate").value||0,bankYears=+$("bankYears").value||10,resRate=+$("residualRate").value||0,resPct=(+$("residualPct").value||0)/100;
+ const bankLoan=Math.max(0,price-down),bankMonthly=pmt(bankLoan,bankRate,bankYears)/10000;
+ const residual=price*resPct,resFin=Math.max(0,price-down-residual),resMonthly=pmt(resFin,resRate,5)/10000;
+ const cashAsset=fv(Math.max(0,assets-price),ret,compare);
+ const bankAsset=fv(Math.max(0,assets-down),ret,compare)-Math.max(0,bankLoan*(1+bankRate/100*bankYears-price*0))+ (+$("resale").value||0);
+ const residualAsset=fv(Math.max(0,assets-down),ret,compare)-residual+(+$("resale").value||0);
+ const methods=[["現金一括",cashAsset,"cashCard"],["銀行ローン",bankAsset,"bankCard"],["残クレ",residualAsset,"residualCard"]].sort((a,b)=>b[1]-a[1]);
+ document.querySelectorAll(".method").forEach(x=>x.classList.remove("winner"));$(methods[0][2]).classList.add("winner");
+ $("cashAsset").textContent=fmtMan(cashAsset);$("bankAsset").textContent=fmtMan(bankAsset);$("residualAsset").textContent=fmtMan(residualAsset);
+ const mileage=+$("mileage").value||0,fp=+$("fuelPrice").value||0,fe=+$("fuelEconomy").value||0;
+ const fuelMonthly=fe>0?(mileage/fe*fp/10000/12):0;
+ const monthlyCost=fuelMonthly+(+$("insurance").value||0)/12+(+$("parking").value||0)+(+$("maintenance").value||0)/12+(+$("annualTax").value||0)/10000/12;
+ const free=(+$("income").value||0)-(+($("living").value)||0)-(+($("invest").value)||0)-bankMonthly-monthlyCost;
+ const score=Math.max(0,Math.min(100,Math.round(100-(bankMonthly+monthlyCost)/Math.max(1,+$("income").value)*160+(free>3?10:free*3))));
+ $("monthlyLoan").textContent=`${bankMonthly.toFixed(1)}万円`;
+ $("monthlyCost").textContent=`${monthlyCost.toFixed(1)}万円`;
+ $("monthlyFree").textContent=`${free.toFixed(1)}万円`;
+ $("score").textContent=`${score}点`;
+ $("bestMethod").textContent=methods[0][0];
+ $("bestReason").textContent=`想定利回り${ret}%、銀行ローン金利${bankRate}%、比較期間${compare}年での概算では、${methods[0][0]}が最も資産を残しやすい結果です。`;
+ $("result").classList.add("show");$("result").scrollIntoView({behavior:"smooth",block:"start"});
 }
-
-function fvLump(pv, annualRate, years){
-  const r=annualRate/100;
-  return pv*Math.pow(1+r,years);
-}
-function fvAnnuity(paymentMonthly, annualRate, years){
-  const r=annualRate/100/12,n=years*12;
-  if(r===0)return paymentMonthly*n;
-  return paymentMonthly*(Math.pow(1+r,n)-1)/r;
-}
-function comparePurchaseMethods(d){
-  const years=Math.max(1,+document.getElementById("compareYears").value||10);
-  const ret=+document.getElementById("investmentReturn").value||0;
-  const bankRate=+document.getElementById("bankRate").value||0;
-  const bankYears=Math.max(1,+document.getElementById("bankYears").value||years);
-  const residualRate=+document.getElementById("residualRate").value||0;
-  const residualYears=Math.max(1,+document.getElementById("residualYears").value||5);
-  const residualPercent=(+document.getElementById("residualPercent").value||0)/100;
-
-  const price=d.price;
-  const vehicleFuture=d.resale || price*0.4;
-
-  // Cash purchase: cash is spent now, but an amount equal to bank payment is invested monthly.
-  const bankMonthly=pmt(price,bankRate,bankYears);
-  const cashInvestFV=fvAnnuity(bankMonthly,ret,Math.min(years,bankYears));
-  const cashPure=d.assets-price+cashInvestFV+vehicleFuture;
-
-  // Bank loan: keep purchase cash invested, subtract remaining debt.
-  const bankInvestFV=fvLump(price,ret,years);
-  const bankBalance=balance(price,bankRate,bankYears,years*12);
-  const bankPure=d.assets+bankInvestFV-bankBalance+vehicleFuture;
-
-  // Residual credit: finance price minus residual; residual is balloon at end.
-  const residualValue=price*residualPercent;
-  const financed=Math.max(0,price-residualValue);
-  const residualMonthly=pmt(financed,residualRate,residualYears);
-  const residualInvestFV=fvLump(price,ret,years);
-  let residualDebt=0;
-  if(years<residualYears){
-    residualDebt=balance(financed,residualRate,residualYears,years*12)+residualValue;
-  }else{
-    residualDebt=residualValue; // assume balloon remains if comparing at/after maturity
-  }
-  const residualPure=d.assets+residualInvestFV-residualDebt+vehicleFuture;
-
-  return {
-    years,ret,
-    cash:{name:"現金一括",value:cashPure},
-    bank:{name:"銀行ローン",value:bankPure},
-    residual:{name:"残クレ",value:residualPure}
-  };
-}
-function renderPurchaseComparison(comp){
-  const methods=[comp.cash,comp.bank,comp.residual].sort((a,b)=>b.value-a.value);
-  const best=methods[0],second=methods[1];
-  const diff=best.value-second.value;
-
-  document.getElementById("bestMethodBox").classList.remove("hidden");
-  document.getElementById("comparisonGrid").classList.remove("hidden");
-  document.getElementById("assetChartCard").classList.remove("hidden");
-  document.getElementById("bestMethod").textContent=best.name;
-  document.getElementById("bestMethodReason").textContent=`${comp.years}年後の純資産は、次点より約${f(diff)}多くなる試算です。想定運用利回り${comp.ret}%を前提としています。`;
-
-  const map={cash:comp.cash,bank:comp.bank,residual:comp.residual};
-  document.getElementById("cashAsset").textContent=f(comp.cash.value);
-  document.getElementById("bankAsset").textContent=f(comp.bank.value);
-  document.getElementById("residualAsset").textContent=f(comp.residual.value);
-
-  ["cashCard","bankCard","residualCard"].forEach(id=>{
-    document.getElementById(id).classList.remove("winner");
-    document.getElementById(id).querySelectorAll(".crown").forEach(x=>x.remove());
-  });
-  const bestId=best.name==="現金一括"?"cashCard":best.name==="銀行ローン"?"bankCard":"residualCard";
-  const card=document.getElementById(bestId);
-  card.classList.add("winner");
-  const crown=document.createElement("div");crown.className="crown";crown.textContent="おすすめ";
-  card.appendChild(crown);
-
-  const vals=[comp.cash.value,comp.bank.value,comp.residual.value];
-  const max=Math.max(...vals),min=Math.min(...vals);
-  const scale=v=>Math.max(18,((v-min)/(Math.max(1,max-min)))*75+25);
-  document.getElementById("assetChart").innerHTML=`
-    <div class="bar-group"><div class="bar cash" style="height:${scale(comp.cash.value)}%"><div class="bar-label">${f(comp.cash.value)}</div></div></div>
-    <div class="bar-group"><div class="bar" style="height:${scale(comp.bank.value)}%"><div class="bar-label">${f(comp.bank.value)}</div></div></div>
-    <div class="bar-group"><div class="bar residual" style="height:${scale(comp.residual.value)}%"><div class="bar-label">${f(comp.residual.value)}</div></div></div>`;
-  document.getElementById("assetChart").insertAdjacentHTML("afterend",`
-    <div class="summary-strip">
-      <div class="summary-box"><span class="small">現金一括</span><b>${f(comp.cash.value)}</b></div>
-      <div class="summary-box"><span class="small">銀行ローン</span><b>${f(comp.bank.value)}</b></div>
-      <div class="summary-box"><span class="small">残クレ</span><b>${f(comp.residual.value)}</b></div>
-      <div class="summary-box"><span class="small">最大差</span><b>${f(methods[0].value-methods[2].value)}</b></div>
-    </div>`);
-}
-function setMode(detail){
-  document.getElementById("simpleTab").classList.toggle("active",!detail);
-  document.getElementById("detailTab").classList.toggle("active",detail);
-  document.querySelectorAll(".detail-only").forEach(el=>el.classList.toggle("hidden",!detail));
-  document.querySelectorAll(".simple-only").forEach(el=>el.classList.toggle("hidden",detail));
-}
-document.getElementById("simpleTab").addEventListener("click",()=>setMode(false));
-document.getElementById("detailTab").addEventListener("click",()=>setMode(true));
-document.querySelectorAll(".car-chip").forEach(chip=>chip.addEventListener("click",()=>{
-  document.getElementById("car").value=chip.dataset.name;
-  document.getElementById("price").value=chip.dataset.price;
-  document.getElementById("engine").value=chip.dataset.engine;
-  document.getElementById("fuelEconomy").value=chip.dataset.fuel;
-  chip.style.borderColor="var(--blue)";
-}));
-setMode(false);
-
-document.getElementById("go").addEventListener("click",()=>{diagnose();
-  const v=id=>+document.getElementById(id).value||0;
-  const d={assets:v("assets"),price:v("price"),resale:v("resale")};
-  const comp=comparePurchaseMethods(d);renderPurchaseComparison(comp);renderLineChart(comp);updateAIAdvisor(comp);
-});
-
-// v7 UI enhancements
-const themeToggle=document.getElementById("themeToggle");
-const savedTheme=localStorage.getItem("theme");
-if(savedTheme==="dark"){document.documentElement.dataset.theme="dark";themeToggle.textContent="☀️";}
-themeToggle.addEventListener("click",()=>{
-  const dark=document.documentElement.dataset.theme==="dark";
-  document.documentElement.dataset.theme=dark?"":"dark";
-  localStorage.setItem("theme",dark?"light":"dark");
-  themeToggle.textContent=dark?"🌙":"☀️";
-});
-
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")});
-},{threshold:.12});
-document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
-
-document.querySelectorAll(".vehicle-card").forEach(card=>card.addEventListener("click",()=>{
-  document.getElementById("car").value=card.dataset.name;
-  document.getElementById("price").value=card.dataset.price;
-  document.getElementById("engine").value=card.dataset.engine;
-  document.getElementById("fuelEconomy").value=card.dataset.fuel;
-  document.getElementById("diag").scrollIntoView({behavior:"smooth"});
-}));
-
-function linePoints(values,min,max,width=820,height=210,x0=55,y0=25){
-  return values.map((v,i)=>{
-    const x=x0+(i/(values.length-1))*width;
-    const y=y0+height-(v-min)/(Math.max(1,max-min))*height;
-    return [x,y];
-  });
-}
-function renderLineChart(comp){
-  const svg=document.getElementById("lineChart");
-  document.getElementById("lineChartCard").classList.remove("hidden");
-  const years=comp.years;
-  const steps=Math.max(2,Math.min(10,years));
-  const cash=[],bank=[],residual=[];
-  const baseAssets=+document.getElementById("assets").value||0;
-  const price=+document.getElementById("price").value||0;
-  const resale=+document.getElementById("resale").value||price*.4;
-  const ret=comp.ret;
-  const bankRate=+document.getElementById("bankRate").value||0;
-  const bankYears=+document.getElementById("bankYears").value||years;
-  const residualRate=+document.getElementById("residualRate").value||0;
-  const residualYears=+document.getElementById("residualYears").value||5;
-  const residualPercent=(+document.getElementById("residualPercent").value||0)/100;
-  const bankPay=pmt(price,bankRate,bankYears);
-  for(let i=0;i<=steps;i++){
-    const t=years*i/steps;
-    const vehicleVal=resale;
-    cash.push(baseAssets-price+fvAnnuity(bankPay,ret,Math.min(t,bankYears))+vehicleVal);
-    bank.push(baseAssets+fvLump(price,ret,t)-balance(price,bankRate,bankYears,t*12)+vehicleVal);
-    const rv=price*residualPercent;
-    const fin=Math.max(0,price-rv);
-    const debt=t<residualYears?balance(fin,residualRate,residualYears,t*12)+rv:rv;
-    residual.push(baseAssets+fvLump(price,ret,t)-debt+vehicleVal);
-  }
-  const all=[...cash,...bank,...residual],min=Math.min(...all),max=Math.max(...all);
-  const colors={cash:"#13a477",bank:"#4d6fff",residual:"#d6a73c"};
-  const paths=[
-    ["cash",cash],["bank",bank],["residual",residual]
-  ].map(([name,vals])=>{
-    const pts=linePoints(vals,min,max);
-    return `<polyline points="${pts.map(p=>p.join(",")).join(" ")}" fill="none" stroke="${colors[name]}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>`;
-  }).join("");
-  let grid="";
-  for(let i=0;i<5;i++){
-    const y=25+i*(210/4);
-    grid+=`<line x1="55" y1="${y}" x2="875" y2="${y}" stroke="rgba(148,163,184,.25)" stroke-width="1"/>`;
-  }
-  svg.innerHTML=`${grid}${paths}
-    <text x="55" y="262" fill="currentColor" font-size="13">現在</text>
-    <text x="835" y="262" fill="currentColor" font-size="13">${years}年後</text>`;
-}
-function updateAIAdvisor(comp){
-  const methods=[comp.cash,comp.bank,comp.residual].sort((a,b)=>b.value-a.value);
-  const best=methods[0],second=methods[1],diff=best.value-second.value;
-  document.getElementById("aiAdvisor").classList.remove("hidden");
-  document.getElementById("shareActions").classList.remove("hidden");
-  const risk=comp.ret>(+document.getElementById("bankRate").value||0)
-    ?"想定利回りがローン金利を上回る前提では、手元資金を運用する効果が期待できます。"
-    :"想定利回りがローン金利を下回るため、利息を払わない方法が優位になりやすいです。";
-  document.getElementById("aiAdvisorText").innerHTML=
-    `<b>${best.name}がおすすめです。</b><br>${comp.years}年後の純資産は、次点より約${f(diff)}多い試算です。${risk}<br><span class="small">運用成果、金利、リセールは保証されないため、安全性重視なら現金一括も比較してください。</span>`;
-  document.getElementById("shareMethod").textContent=best.name;
-  document.getElementById("shareDiff").textContent=`${comp.years}年後、次点より約${f(diff)}有利`;
-  window.__lastShareText=`クルマ家計診断の結果\nおすすめ：${best.name}\n${comp.years}年後、次点より約${f(diff)}有利な試算でした。\n#クルマ家計診断 #資産形成`;
-}
-document.getElementById("copyResultBtn").addEventListener("click",async()=>{
-  try{
-    await navigator.clipboard.writeText(window.__lastShareText||"クルマ家計診断を利用しました。");
-    alert("診断結果をコピーしました。");
-  }catch(e){alert("コピーできませんでした。");}
-});
-document.getElementById("downloadResultBtn").addEventListener("click",()=>{
-  const card=document.getElementById("shareCard");
-  const svg=`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675">
-    <foreignObject width="100%" height="100%">
-      <div xmlns="http://www.w3.org/1999/xhtml">${card.innerHTML}</div>
-    </foreignObject></svg>`;
-  const blob=new Blob([svg],{type:"image/svg+xml;charset=utf-8"});
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement("a");a.href=url;a.download="kuruma-kakei-result.svg";a.click();
-  setTimeout(()=>URL.revokeObjectURL(url),1000);
-});
-
-
-// v8: robust diagnosis CTA behavior
-document.querySelectorAll(".js-start-diagnosis").forEach(link=>{
-  link.addEventListener("click",event=>{
-    event.preventDefault();
-    const section=document.getElementById("diag");
-    if(!section) return;
-    section.classList.add("show");
-    const simpleTab=document.getElementById("simpleTab");
-    if(simpleTab) simpleTab.click();
-    section.scrollIntoView({behavior:"smooth",block:"start"});
-    setTimeout(()=>{
-      const firstInput=document.getElementById("income");
-      if(firstInput) firstInput.focus({preventScroll:true});
-    },650);
-  });
-});
-
-
-// Ver1.2 analytics events
-function trackEvent(name, params={}){if(typeof gtag==="function")gtag("event",name,params)}
-document.querySelectorAll(".js-start-diagnosis").forEach(el=>el.addEventListener("click",()=>trackEvent("start_diagnosis")));
-document.querySelectorAll(".vehicle-card,.car-chip").forEach(el=>el.addEventListener("click",()=>trackEvent("select_car",{car_name:el.dataset.name||""})));
-const v12Go=document.getElementById("go");
-if(v12Go)v12Go.addEventListener("click",()=>trackEvent("complete_diagnosis",{car_name:document.getElementById("car")?.value||"",diagnosis_mode:document.getElementById("mode")?.value||""}));
-
+$("diagnoseBtn").addEventListener("click",diagnose);
+refreshMaker();
 </script>
-<div class="sticky-mobile-cta"><a class="js-start-diagnosis" href="#diag">🚗 無料で診断する</a></div></body></html>
+</body></html>

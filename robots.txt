@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://kuruma-kakei.vercel.app/sitemap.xml
