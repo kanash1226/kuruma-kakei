@@ -1,0 +1,2516 @@
+[
+  {
+    "maker": "トヨタ",
+    "model": "アクア",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "アルファード",
+    "has_verified_grade": true,
+    "status": "verified_available"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ヴェルファイア",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ヴォクシー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ノア",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "シエンタ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "プリウス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "プリウスPHV",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "カローラ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "カローラスポーツ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "カローラツーリング",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "カローラクロス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "クラウン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "クラウンスポーツ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "クラウンクロスオーバー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "クラウンエステート",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "センチュリー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ハリアー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "RAV4",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "RAV4 PHV",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ヤリス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ヤリスクロス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "GRヤリス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "GR86",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "スープラ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ランドクルーザー70",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ランドクルーザー250",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ランドクルーザー300",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ハイラックス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ハイエース",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "プロボックス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ルーミー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ライズ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "パッソ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "C-HR",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "bZ4X",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "MIRAI",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "サクシード",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "エスクァイア",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "エスティマ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ウィッシュ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "アイシス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "マークX",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "SAI",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "86",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "FJクルーザー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ピクシスエポック",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ピクシスジョイ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ピクシスメガ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "ピクシスバン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "トヨタ",
+    "model": "コペンGR SPORT",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "LBX",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "UX",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "UX300e",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "NX",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "NX PHEV",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "RX",
+    "has_verified_grade": true,
+    "status": "verified_available"
+  },
+  {
+    "maker": "レクサス",
+    "model": "RX PHEV",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "RZ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "GX",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "LX",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "IS",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "ES",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "LS",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "RC",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "RC F",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "LC",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "LFA",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "HS",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "CT",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "レクサス",
+    "model": "GS",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "ノート",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "ノート オーラ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "セレナ",
+    "has_verified_grade": true,
+    "status": "verified_available"
+  },
+  {
+    "maker": "日産",
+    "model": "エクストレイル",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "キックス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "アリア",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "リーフ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "サクラ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "デイズ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "ルークス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "NV100クリッパー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "キャラバン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "フェアレディZ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "GT-R",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "スカイライン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "フーガ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "シーマ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "ティアナ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "エルグランド",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "マーチ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "キューブ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "ジューク",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "ムラーノ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "デュアリス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "ラフェスタ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "ウイングロード",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "AD",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "シルフィ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "日産",
+    "model": "NV200バネット",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "N-BOX",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "N-WGN",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "N-ONE",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "N-VAN",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "フィット",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "フリード",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "ステップワゴン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "ヴェゼル",
+    "has_verified_grade": true,
+    "status": "verified_available"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "ZR-V",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "WR-V",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "CR-V",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "シビック",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "シビックタイプR",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "アコード",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "オデッセイ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "レジェンド",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "NSX",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "S660",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "シャトル",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "グレイス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "ジェイド",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "インサイト",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "CR-Z",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "Honda e",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "クラリティ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "エリシオン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "ストリーム",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "MAZDA2",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "MAZDA3",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "MAZDA6",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "CX-3",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "CX-30",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "CX-5",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "CX-60",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "CX-80",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "CX-8",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "MX-30",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "MX-30 EV",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "ロードスター",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "ロードスターRF",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "アテンザ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "アクセラ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "デミオ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "プレマシー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "ビアンテ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "ベリーサ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "RX-8",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "マツダ",
+    "model": "CX-7",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "インプレッサ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "クロストレック",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "フォレスター",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "レヴォーグ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "レイバック",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "アウトバック",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "WRX S4",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "WRX STI",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "BRZ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "レガシィB4",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "レガシィツーリングワゴン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "XV",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "エクシーガ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "ジャスティ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "シフォン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "ステラ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "プレオプラス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スバル",
+    "model": "サンバーバン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "ジムニー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "ジムニーシエラ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "スイフト",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "スイフトスポーツ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "ソリオ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "ソリオバンディット",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "スペーシア",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "スペーシアカスタム",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "スペーシアギア",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "ハスラー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "ワゴンR",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "ワゴンRスマイル",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "アルト",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "アルトラパン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "エブリイ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "エブリイワゴン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "クロスビー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "イグニス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "フロンクス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "ランディ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "キャリイ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "SX4 S-CROSS",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "エスクード",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "キザシ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "スズキ",
+    "model": "パレット",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "タント",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "タントカスタム",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "ムーヴ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "ムーヴキャンバス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "ミライース",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "ミラトコット",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "タフト",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "ロッキー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "トール",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "コペン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "アトレー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "ハイゼットカーゴ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "ハイゼットトラック",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "ウェイク",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "キャスト",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "ブーン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "メビウス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "ソニカ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "エッセ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ダイハツ",
+    "model": "ミラココア",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "デリカD:5",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "デリカミニ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "アウトランダーPHEV",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "エクリプスクロス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "エクリプスクロスPHEV",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "トライトン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "eKワゴン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "eKクロス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "eKクロスEV",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "eKスペース",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "ミニキャブバン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "ミラージュ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "RVR",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "パジェロ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "ランサーエボリューション",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "ギャランフォルティス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "三菱",
+    "model": "アイ・ミーブ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "Aクラス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "Bクラス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "Cクラス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "Eクラス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "Sクラス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "CLA",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "CLS",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "GLA",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "GLB",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "GLC",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "GLE",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "GLS",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "Gクラス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "SL",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "AMG GT",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "EQA",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "EQB",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "EQC",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "EQE",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "EQS",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "Vクラス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "メルセデス・ベンツ",
+    "model": "Citan",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "1シリーズ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "2シリーズクーペ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "2シリーズグランクーペ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "2シリーズアクティブツアラー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "3シリーズ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "4シリーズ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "5シリーズ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "7シリーズ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "8シリーズ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "X1",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "X2",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "X3",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "X4",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "X5",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "X6",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "X7",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "XM",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "Z4",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "iX1",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "iX2",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "i4",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "i5",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "i7",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "iX",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "M2",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "M3",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "M4",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "M5",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "BMW",
+    "model": "M8",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "A1",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "A3",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "A4",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "A5",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "A6",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "A7",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "A8",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "Q2",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "Q3",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "Q4 e-tron",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "Q5",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "Q7",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "Q8",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "e-tron GT",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "TT",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "R8",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "S3",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "S4",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "S5",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "RS3",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "RS4",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "RS5",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "RS6",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アウディ",
+    "model": "RS7",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォルクスワーゲン",
+    "model": "ポロ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォルクスワーゲン",
+    "model": "ゴルフ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォルクスワーゲン",
+    "model": "ゴルフヴァリアント",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォルクスワーゲン",
+    "model": "ゴルフトゥーラン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォルクスワーゲン",
+    "model": "T-Cross",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォルクスワーゲン",
+    "model": "T-Roc",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォルクスワーゲン",
+    "model": "ティグアン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォルクスワーゲン",
+    "model": "パサート",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォルクスワーゲン",
+    "model": "パサートヴァリアント",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォルクスワーゲン",
+    "model": "アルテオン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォルクスワーゲン",
+    "model": "シャラン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォルクスワーゲン",
+    "model": "ザ・ビートル",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォルクスワーゲン",
+    "model": "ID.4",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォルクスワーゲン",
+    "model": "up!",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ボルボ",
+    "model": "EX30",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ボルボ",
+    "model": "XC40",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ボルボ",
+    "model": "C40",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ボルボ",
+    "model": "XC60",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ボルボ",
+    "model": "XC90",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ボルボ",
+    "model": "V40",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ボルボ",
+    "model": "V60",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ボルボ",
+    "model": "V90",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ボルボ",
+    "model": "S60",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ボルボ",
+    "model": "S90",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "MINI",
+    "model": "3ドア",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "MINI",
+    "model": "5ドア",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "MINI",
+    "model": "コンバーチブル",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "MINI",
+    "model": "クラブマン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "MINI",
+    "model": "カントリーマン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "MINI",
+    "model": "ペースマン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "MINI",
+    "model": "クーペ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "MINI",
+    "model": "ロードスター",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ポルシェ",
+    "model": "718ケイマン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ポルシェ",
+    "model": "718ボクスター",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ポルシェ",
+    "model": "911",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ポルシェ",
+    "model": "タイカン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ポルシェ",
+    "model": "パナメーラ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ポルシェ",
+    "model": "マカン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ポルシェ",
+    "model": "カイエン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "テスラ",
+    "model": "Model 3",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "テスラ",
+    "model": "Model Y",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "テスラ",
+    "model": "Model S",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "テスラ",
+    "model": "Model X",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ジープ",
+    "model": "レネゲード",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ジープ",
+    "model": "コンパス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ジープ",
+    "model": "チェロキー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ジープ",
+    "model": "グランドチェロキー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ジープ",
+    "model": "ラングラー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ジープ",
+    "model": "グラディエーター",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ジープ",
+    "model": "コマンダー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ランドローバー",
+    "model": "レンジローバー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ランドローバー",
+    "model": "レンジローバースポーツ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ランドローバー",
+    "model": "レンジローバーヴェラール",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ランドローバー",
+    "model": "レンジローバーイヴォーク",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ランドローバー",
+    "model": "ディフェンダー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ランドローバー",
+    "model": "ディスカバリー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ランドローバー",
+    "model": "ディスカバリースポーツ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "プジョー",
+    "model": "208",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "プジョー",
+    "model": "308",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "プジョー",
+    "model": "408",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "プジョー",
+    "model": "508",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "プジョー",
+    "model": "2008",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "プジョー",
+    "model": "3008",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "プジョー",
+    "model": "5008",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "プジョー",
+    "model": "リフター",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "プジョー",
+    "model": "e-208",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ルノー",
+    "model": "ルーテシア",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ルノー",
+    "model": "キャプチャー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ルノー",
+    "model": "アルカナ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ルノー",
+    "model": "カングー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ルノー",
+    "model": "メガーヌ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ルノー",
+    "model": "トゥインゴ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "シトロエン",
+    "model": "C3",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "シトロエン",
+    "model": "C4",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "シトロエン",
+    "model": "C5 X",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "シトロエン",
+    "model": "ベルランゴ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "シトロエン",
+    "model": "C3エアクロス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "シトロエン",
+    "model": "C5エアクロス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フィアット",
+    "model": "500",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フィアット",
+    "model": "500e",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フィアット",
+    "model": "500X",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フィアット",
+    "model": "パンダ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フィアット",
+    "model": "ドブロ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フィアット",
+    "model": "アバルト595",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フィアット",
+    "model": "アバルト695",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アルファロメオ",
+    "model": "ジュリア",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アルファロメオ",
+    "model": "ステルヴィオ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アルファロメオ",
+    "model": "トナーレ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アルファロメオ",
+    "model": "ジュリエッタ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "アルファロメオ",
+    "model": "4C",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ジャガー",
+    "model": "XE",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ジャガー",
+    "model": "XF",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ジャガー",
+    "model": "XJ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ジャガー",
+    "model": "E-PACE",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ジャガー",
+    "model": "F-PACE",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ジャガー",
+    "model": "I-PACE",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "ジャガー",
+    "model": "F-TYPE",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "キャデラック",
+    "model": "CT5",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "キャデラック",
+    "model": "CT6",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "キャデラック",
+    "model": "XT4",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "キャデラック",
+    "model": "XT5",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "キャデラック",
+    "model": "XT6",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "キャデラック",
+    "model": "エスカレード",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "シボレー",
+    "model": "カマロ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "シボレー",
+    "model": "コルベット",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "シボレー",
+    "model": "キャプティバ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "シボレー",
+    "model": "トレイルブレイザー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "シボレー",
+    "model": "タホ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "シボレー",
+    "model": "サバーバン",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォード",
+    "model": "マスタング",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォード",
+    "model": "エクスプローラー",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォード",
+    "model": "ブロンコ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォード",
+    "model": "F-150",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォード",
+    "model": "フォーカス",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "フォード",
+    "model": "フィエスタ",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  },
+  {
+    "maker": "その他",
+    "model": "その他・手入力",
+    "has_verified_grade": false,
+    "status": "manual_entry"
+  }
+]

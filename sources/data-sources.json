@@ -1,0 +1,42 @@
+[
+  {
+    "maker": "トヨタ",
+    "model": "アルファード",
+    "grade": "Z ガソリン 2WD",
+    "url": "https://toyota.jp/alphard/grade/",
+    "source": "トヨタ公式 価格・グレード",
+    "verified_on": "2026-07-17"
+  },
+  {
+    "maker": "レクサス",
+    "model": "RX",
+    "grade": "RX350 F SPORT AWD",
+    "url": "https://lexus.jp/models/rx/spec_price/",
+    "source": "レクサス公式 RX 価格・主要諸元",
+    "verified_on": "2026-07-17"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "ヴェゼル",
+    "grade": "e:HEV Z FF",
+    "url": "https://www.honda.co.jp/VEZEL/webcatalog/type/list/",
+    "source": "Honda公式 ヴェゼル タイプ一覧",
+    "verified_on": "2026-07-17"
+  },
+  {
+    "maker": "ホンダ",
+    "model": "ヴェゼル",
+    "grade": "e:HEV RS FF",
+    "url": "https://www.honda.co.jp/VEZEL/webcatalog/type/list/",
+    "source": "Honda公式 ヴェゼル タイプ一覧",
+    "verified_on": "2026-07-17"
+  },
+  {
+    "maker": "日産",
+    "model": "セレナ",
+    "grade": "X 2WD",
+    "url": "https://www3.nissan.co.jp/vehicles/new/serena/specifications.html",
+    "source": "日産公式 セレナ 価格・グレード",
+    "verified_on": "2026-07-17"
+  }
+]
